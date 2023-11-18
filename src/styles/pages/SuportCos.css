@@ -1,0 +1,91 @@
+.Opciones {
+  width: 100%;
+  padding: 25px;
+  color: white;
+  max-width: 1000px;
+  margin: auto;
+  background: rgb(3, 55, 85);
+}
+
+.Opciones .Botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Opciones .Botones button {
+  width: 100%;
+  max-width: 300px;
+  color: white;
+  margin: 3px 5px;
+  padding: 15px !important;
+}
+
+.OpcionSelecionada{
+    background-color: white;
+    margin: 3px auto;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 4px;
+}
+
+.MainRazonLlamada {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Box-Razones{
+  display: flex;
+  margin: 10px 0px;
+  width: 100%;
+}
+
+.BtnOpciones{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.BtnOpciones button{
+  margin: 0px 5px;
+  color: white;
+}
+
+.Bloque{
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px rgb(204, 204, 204);
+  padding: 20px;
+  background-color:var(--color-primario);
+  color: white;
+  margin: 0px 10px;
+}
+
+.Bloque div{
+  background-color: rgb(245, 245, 245);
+  margin: 5px 0px;
+  padding: 5px;
+  border-radius: 4px;
+  font-family: "Nunito", sans-serif;
+  color: var(--color-primario);
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  width: 100%;
+}
+
+.Bloque div span{
+  background-color: var(--rojo-claro);
+  border-radius: 4px;
+  padding: 4px;
+  display: block;
+  min-width: 45px;
+  margin-right: 5px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
