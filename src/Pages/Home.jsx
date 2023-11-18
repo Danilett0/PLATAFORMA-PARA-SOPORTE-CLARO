@@ -6,7 +6,7 @@ function Home() {
   return (
     <main className="HomePage">
       <div>
-        <h1>¡Bienvenido a tu espacio de trabajo!</h1>
+        <h1>¡Bienvenido a tu espacio <br/> de trabajo!</h1>
         <Player
           autoplay
           loop
