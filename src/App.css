@@ -79,7 +79,7 @@ p {
   z-index: 10;
 }
 
-div#lottie{
+div#lottie {
   width: 100%;
   max-width: 700px;
 }
@@ -104,13 +104,27 @@ div#lottie{
   background-color: var(--azul-claro);
 }
 
-.Black{
+.Black {
   background-color: black;
   color: white;
 }
 
-.Hidde{
+.Hidde {
   display: none;
+}
+
+.HomePage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.HomePage div code {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 777px) {
