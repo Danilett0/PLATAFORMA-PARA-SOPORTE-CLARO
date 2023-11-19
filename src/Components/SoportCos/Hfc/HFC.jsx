@@ -23,7 +23,7 @@ function HFC() {
 
   return (
     <div className="MainHfc">
-      <h2>FHC 🐰</h2>
+      <h2>HFC 🐰</h2>
       <Botones
         ResetModulos={ResetModulos}
         SetIpFija={SetIpFija}
