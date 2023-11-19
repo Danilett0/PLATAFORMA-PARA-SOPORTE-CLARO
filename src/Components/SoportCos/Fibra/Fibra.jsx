@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Gpon from "./Gpon/Gpon";
 import P2p from "./Gpon/P2p";
-import "../../../styles/components/SoportCos/Fibra.css";
 
 function Fibra() {
   const [gpon, setGpon] = useState(false);
@@ -10,9 +9,11 @@ function Fibra() {
   return (
     <div className="MainFibra">
       <div className="EncabezadoFibra">
-        <h2>Fibra Optica</h2>
+        <h2>
+          Fibra 😏
+        </h2>
 
-        <h4>SELECCIONA EL TIPO DE RED DE ACCESO</h4>
+        <h4>¿Qué tipo de red de acceso necesitas?</h4>
 
         <div className="Botones">
           <button

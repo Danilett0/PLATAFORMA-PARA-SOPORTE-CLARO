@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Player } from "@lottiefiles/react-lottie-player";
 import "../App.css";
+import "../styles/pages/Home.css"
+
 function Home() {
   return (
     <main className="HomePage">

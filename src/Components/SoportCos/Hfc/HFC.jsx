@@ -23,6 +23,7 @@ function HFC() {
 
   return (
     <div className="MainHfc">
+      <h2>FHC 🐰</h2>
       <Botones
         ResetModulos={ResetModulos}
         SetIpFija={SetIpFija}
@@ -40,10 +41,10 @@ function HFC() {
           <div className="Box-Razones">
             <div className="Bloque">
               <div>
-                <span>Visitas</span> SERVIDES1
+                <span>AGENDAR VISITAS</span> <b>SERVIDES1</b>
               </div>
               <div>
-                <span>Otros</span> SOPNROCCID
+                <span>OTRAS SOLICITUDES</span> <b>SOPNROCCID</b>
               </div>
             </div>
           </div>

@@ -11,7 +11,9 @@ function SuportCos() {
   return (
     <div className="Tecnologias">
       <div className="Opciones">
-        <h2>Selecciona una tecnologia</h2>
+        <h2>
+          Selecciona un tipo de conexión <br /> para continuar 😎
+        </h2>
         <div className="Botones">
           <button
             onClick={() => {

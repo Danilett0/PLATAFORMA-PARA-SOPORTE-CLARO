@@ -1,3 +1,4 @@
+/* Variables globales */
 :root {
   --color-primario: #092239;
   --rojo-claro: #d94848;
@@ -8,14 +9,15 @@
   --verde-claro: rgb(17, 161, 149);
 }
 
-html {
-  scroll-behavior: smooth;
+/* Reset y estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -26,25 +28,7 @@ li {
   list-style: none;
 }
 
-a {
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-decoration: none;
-  font-family: Rubik, sans-serif;
-}
-
-h1 {
-  font-size: 50px;
-  color: white;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 20px;
-}
-
+/* Tipografía */
 h1,
 h2,
 h3,
@@ -54,18 +38,52 @@ h6 {
   font-family: Rubik, sans-serif;
   font-weight: 700;
   text-align: center;
-  margin: 10px 0px;
+  margin: 10px 0;
   text-transform: uppercase;
 }
 
+h1 {
+  font-size: 50px;
+  color: white;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+/* Enlaces */
+a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Rubik, sans-serif;
+}
+
+/* Formularios */
+input {
+  padding: 12px;
+  margin: 5px;
+  border-radius: 4px;
+  outline: none;
+  font-weight: bold;
+  border: none;
+}
+
+/* Párrafos */
 p {
   font-family: Nunito, sans-serif;
   font-weight: 400;
   font-size: 17px;
-  margin: 10px 0px;
+  margin: 10px 0;
   color: var(--color-primario);
 }
 
+/* Botones */
 .Button {
   padding: 10px 15px !important;
   border-radius: 3px;
@@ -79,15 +97,11 @@ p {
   z-index: 10;
 }
 
-div#lottie {
-  width: 100%;
-  max-width: 700px;
-}
-
 .Button:hover {
   transform: scale(1.03);
 }
 
+/* Colores específicos para botones */
 .Red {
   background-color: var(--rojo-claro);
 }
@@ -109,24 +123,18 @@ div#lottie {
   color: white;
 }
 
+/* Elementos específicos */
+div#lottie {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Clase de ocultar */
 .Hidde {
   display: none;
 }
 
-.HomePage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.HomePage div code {
-  color: white;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
+/* Media queries */
 @media screen and (max-width: 777px) {
   h1 {
     font-size: 23px;
@@ -143,22 +151,5 @@ div#lottie {
   p {
     font-size: 15px;
   }
-  .EfectBorderRoundBlue,
-  .EfectBorderRoundWhite {
-    height: 100px;
-  }
-}
-
-/* animaciones globales */
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
-  100% {
-    transform: scale(1);
-  }
+  /* Ajustes adicionales para dispositivos móviles */
 }

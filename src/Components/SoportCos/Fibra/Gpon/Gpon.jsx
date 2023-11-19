@@ -8,6 +8,8 @@ function Gpon(props) {
 
   return (
     <div className="MainGpon">
+
+      <h4>Selecciona la marca del equipo <br/> para continuar</h4>
       <div className="Marcas">
         <button
           onClick={() => {

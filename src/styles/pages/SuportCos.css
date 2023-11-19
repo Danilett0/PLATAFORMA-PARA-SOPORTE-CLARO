@@ -1,8 +1,8 @@
-.Tecnologias{
+.Tecnologias {
   padding: 30px;
 }
 
-.Opciones {
+.Tecnologias .Opciones {
   width: 100%;
   padding: 25px;
   color: white;
@@ -12,13 +12,13 @@
   border-radius: 4px;
 }
 
-.Opciones .Botones {
+.Tecnologias .Opciones .Botones {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.Opciones .Botones button {
+.Tecnologias .Opciones .Botones button {
   width: 100%;
   max-width: 300px;
   color: white;
@@ -26,12 +26,12 @@
   padding: 15px !important;
 }
 
-.OpcionSelecionada{
-    background-color: white;
-    margin: 3px auto;
-    width: 100%;
-    max-width: 1000px;
-    border-radius: 4px;
+.OpcionSelecionada {
+  background-color: white;
+  margin: 3px auto;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 4px;
 }
 
 .MainRazonLlamada {
@@ -42,35 +42,39 @@
   justify-content: center;
 }
 
-.Box-Razones{
+.Box-Razones {
   display: flex;
   margin: 10px 0px;
   width: 100%;
 }
 
-.BtnOpciones{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
+.MainHfc{
+  padding: 20px;
 }
 
-.BtnOpciones button{
-  margin: 0px 5px;
+.BtnOpciones {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.BtnOpciones button {
+  margin: 5px;
   color: white;
 }
 
-.Bloque{
+.Bloque {
   width: 100%;
   border-radius: 4px;
   box-shadow: 1px 1px 5px rgb(204, 204, 204);
   padding: 20px;
-  background-color:var(--color-primario);
+  background-color: var(--color-primario);
   color: white;
-  margin: 0px 10px;
+  margin: 5px;
 }
 
-.Bloque div{
+.Bloque div {
   background-color: rgb(245, 245, 245);
   margin: 5px 0px;
   padding: 5px;
@@ -83,7 +87,7 @@
   width: 100%;
 }
 
-.Bloque div span{
+.Bloque div span {
   background-color: var(--rojo-claro);
   border-radius: 4px;
   padding: 4px;
@@ -93,4 +97,172 @@
   color: white;
   font-weight: bold;
   text-align: center;
+}
+
+.MainFibra .Botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MainFibra .EncabezadoFibra {
+  padding: 25px;
+}
+
+.MainFibra .Botones button {
+  width: 100%;
+  max-width: 200px;
+  color: white;
+  margin: 20px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MainFibra .Botones button svg {
+  margin-left: 5px;
+}
+
+.MainGpon {
+  border-top: 5px solid var(--color-primario);
+  padding: 5px;
+}
+
+.Marcas {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.Marcas button {
+  width: 200px;
+  margin: 0px 5px;
+}
+
+.MainHuawei {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.MainHuawei .Enlace {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.MainHuawei .Enlace button {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MainHuawei .Enlace button svg {
+  margin-left: 5px;
+}
+
+.MainHuawei .Comandos {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.MainHuawei .Comandos p {
+  color: var(--rojo-claro);
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+}
+
+.MainHuawei h3 {
+  margin-top: 30px;
+}
+
+.MainHuawei h3 span {
+  color: var(--rojo-claro);
+}
+
+.MainHuawei .Comandos code {
+  margin: 5px 0px;
+}
+
+.MainHuawei .Comandos .IconsOpciones svg {
+  margin: 0px 10px;
+  cursor: pointer;
+  font-size: 30px;
+  transition: 0.5s;
+}
+
+.MainHuawei .Comandos .IconsOpciones svg:hover {
+  color: var(--rojo-claro);
+}
+
+.MainHuawei .Comandos .TitleComandos {
+  margin-top: 30px;
+  color: var(--rojo-claro);
+}
+
+.MainFibra .Comandos .Puertos {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MainFibra .Comandos .Puertos div input {
+  max-width: 50px;
+}
+
+.MainFibra .Comandos .Puertos button {
+  color: white;
+}
+
+.MainFibra .Comandos .Ips {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MainFibra .Comandos .Ips button {
+  color: white;
+  margin: 0px 5px;
+}
+
+.MainFibra .Comandos .ComandosIps {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.MainFibra .Comandos .ComandosIps div {
+  border: 1px solid white;
+  padding: 10px;
+  width: 48%;
+}
+
+.MainFibra .Comandos .ComandosIps code {
+  display: block;
+}
+
+.MainFibra .Comandos .ComandosIps span {
+  color: var(--rojo-claro);
+}
+
+@media (max-width: 767px) {
+  .BtnOpciones {
+    flex-direction: column;
+  }
+
+  .Box-Razones {
+    flex-wrap: wrap;
+  }
 }
