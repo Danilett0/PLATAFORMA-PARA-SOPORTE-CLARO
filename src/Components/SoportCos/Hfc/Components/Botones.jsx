@@ -69,12 +69,12 @@ function Botones(props) {
 
 Botones.propTypes = {
   ResetModulos: propTypes.func.isRequired,
-  SetRazonLlamada: propTypes.bool.isRequired,
-  SetTipologia: propTypes.bool.isRequired,
-  SetPerfilEscala: propTypes.bool.isRequired,
-  SetConfAvan: propTypes.bool.isRequired,
-  SetComandos: propTypes.bool.isRequired,
-  SetIpFija: propTypes.bool.isRequired,
+  SetRazonLlamada: propTypes.func.isRequired,
+  SetTipologia: propTypes.func.isRequired,
+  SetPerfilEscala: propTypes.func.isRequired,
+  SetConfAvan: propTypes.func.isRequired,
+  SetComandos: propTypes.func.isRequired,
+  SetIpFija: propTypes.func.isRequired,
 };
 
 export default Botones;

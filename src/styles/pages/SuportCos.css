@@ -48,7 +48,7 @@
   width: 100%;
 }
 
-.MainHfc{
+.MainHfc {
   padding: 20px;
 }
 
@@ -257,6 +257,70 @@
   color: var(--rojo-claro);
 }
 
+.Form-Plantilla {
+  display: flex;
+  justify-content: center;
+}
+
+.Form-Plantilla .Plantilla-Generada{
+  background-color: var(--color-primario);
+  color: white;
+  margin: 20px;
+  border-radius: 4px;
+  text-align: left;
+  border: none;
+}
+
+.Form-Plantilla form {
+  width: 100%;
+  max-width: 900px;
+  background-color: var(--color-primario);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 20px 5px;
+}
+
+.Form-Plantilla form input[type="submit"] {
+  color: white;
+  margin: 10px 0px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.Form-Plantilla form input[type="submit"]:hover {
+  transform: scale(1);
+}
+
+.Form-Plantilla form .Colx2 {
+  margin: 3px 0px;
+  border-radius: 3px;
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+}
+
+.Form-Plantilla form .Colx2 div {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+}
+
+.Form-Plantilla form .Colx2 div input {
+  padding: 10px;
+  width: 100%;
+  margin: 3px 0px;
+}
+
+.Form-Plantilla form .Colx2 div label {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  font-family: rubik, sans-serif;
+}
+
 @media (max-width: 767px) {
   .BtnOpciones {
     flex-direction: column;
@@ -264,5 +328,13 @@
 
   .Box-Razones {
     flex-wrap: wrap;
+  }
+
+  .Form-Plantilla form .Colx2 {
+    flex-direction: column;
+  }
+  .Form-Plantilla form .Colx2 div {
+    width: 100%;
+    margin: 5px 0px;
   }
 }
