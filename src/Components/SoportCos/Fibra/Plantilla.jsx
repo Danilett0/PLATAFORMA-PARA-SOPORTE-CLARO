@@ -35,7 +35,8 @@ function Plantilla() {
             <div>
               <label>TIPO DE SERVICIO</label>
               <input
-                defaultValue={"EMPRESAS Y NEGOCIOS"}
+                required
+                defaultValue={"NEGOCIOS"}
                 {...register("Tipo de Servicio")}
               />
             </div>
@@ -43,6 +44,7 @@ function Plantilla() {
             <div>
               <label>SUBSEGMENTO</label>
               <input
+                required
                 defaultValue={"FRONT NEGOCIOS COS"}
                 {...register("Sub Secmento")}
               />
@@ -52,12 +54,12 @@ function Plantilla() {
           <div className="Colx2">
             <div>
               <label>CÓDIGO DE SERVICIO</label>
-              <input {...register("Codigo del Servicio")} />
+              <input required {...register("Codigo del Servicio")} />
             </div>
 
             <div>
               <label>NOMBRE EMPRESA</label>
-              <input {...register("Nombre Empresa")} />
+              <input required {...register("Nombre Empresa")} />
             </div>
           </div>
 
@@ -65,108 +67,59 @@ function Plantilla() {
             <div>
               <label>AFECTACIÓN</label>
               <input
+                required
                 defaultValue={"SERVICIO CAIDO"}
                 {...register("Afectacion")}
               />
             </div>
 
             <div>
-              <label>DIRECCION DEL CLIENTE</label>
-              <input {...register("Direccion")} />
+              <label>DESCRIPCIÓN ACTIVIDAD</label>
+              <input required {...register("Descripcion")} />
             </div>
           </div>
 
           <div className="Colx2">
             <div>
-              <label>CIUDAD</label>
-              <input {...register("Ciudad")} />
+              <label>MEDICIÓN OTDR - PIM EQUIPO</label>
+              <input {...register("Medicion OTDR")} />
             </div>
 
-            <div>
-              <label>NOMBRE SDS</label>
-              <input {...register("Nombre SDS")} />
-            </div>
-          </div>
-
-          <div className="Colx2">
             <div>
               <label>RED DE ACCESO (EQUIPO)</label>
-              <input {...register("Red de Acceso")} />
-            </div>
-
-            <div>
-              <label>PUERTO</label>
-              <input {...register("Puerto")} />
+              <input required {...register("Red de Acceso")} />
             </div>
           </div>
 
           <div className="Colx2">
+            <div>
+              <label>PUERTO OLT</label>
+              <input required {...register("Puerto OLT")} />
+            </div>
+
             <div>
               <label>OT INSTALACIÓN</label>
-              <input {...register("Ot Instalacion")} />
-            </div>
-
-            <div>
-              <label>CONTACTO DEL CLIENTE</label>
-              <input {...register("Contacto Cliente")} />
+              <input required {...register("OT Instalacion")} />
             </div>
           </div>
 
           <div className="Colx2">
             <div>
-              <label>HORARIO DE ATENCIÓN EMPRESA</label>
-              <input
-                defaultValue={"Lunes a Viernes 08:00 - 17:00"}
-                {...register("Horario Atencion")}
-              />
+              <label>CONTACTO DEL CLIENTE:</label>
+              <input required {...register("Contacto Cliente")} />
             </div>
 
             <div>
               <label>PERMISOS ESPECIALES</label>
               <input
+                required
                 defaultValue={"NO SE REQUIERE"}
                 {...register("Permisos")}
               />
             </div>
           </div>
 
-          <div className="Colx2">
-            <div>
-              <label>ACTIVIDAD PROGRAMADA O INMEDIATA</label>
-              <input defaultValue={"INMEDIATA"} {...register("Actividad")} />
-            </div>
-
-            <div>
-              <label>FECHA Y HORA DE LA VENTANA</label>
-              <input defaultValue={"INMEDIATA"} {...register("Ventana")} />
-            </div>
-          </div>
-
-          <div className="Colx2">
-            <div>
-              <label>DESCRIPCIÓN DE LA ACTIVIDAD</label>
-              <input {...register("Descripcion Actividad")} />
-            </div>
-
-            <div>
-              <label>CONTACTO DE QUIEN REPORTA/ INGENIERO NOC</label>
-              <input {...register("Contacto")} />
-            </div>
-          </div>
-
-          <div className="Colx2">
-            <div>
-              <label>EXTENSIÓN</label>
-              <input {...register("Extencion")} />
-            </div>
-
-            <div>
-              <label>TAREA IM</label>
-              <input {...register("Tarea Im")} />
-            </div>
-          </div>
-
-          <input className="Button Red" type="submit" />
+          <input required className="Button Red" type="submit" />
         </form>
       ) : (
         <button className="Button Plantilla-Generada" onClick={copyToClipboard}>
@@ -177,7 +130,7 @@ function Plantilla() {
                 {key}: ({value}) <br />
               </code>
             ))}
-        </button>        
+        </button>
       )}
     </div>
   );
