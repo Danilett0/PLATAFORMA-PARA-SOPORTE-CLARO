@@ -100,9 +100,9 @@ function Huawei() {
               <>
                 <p>PASO 2 (Estado Puerto Optico)</p>
                 <code>display service-port {ServPort}</code>
-                <code>
+                {/* <code>
                   display current-configuration service-port {ServPort}
-                </code>
+                </code> */}
                 <div className="Puertos">
                   <div>
                     <input ref={InpRackRef} placeholder="rack" type="text" />

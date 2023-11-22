@@ -68,7 +68,7 @@ function Zte() {
         {firtsComan && (
           <>
             <p>PASO 1 (Info, Validacion Clientes OLT)</p>
-            <code>show running-config | inc {Enlace}</code>
+            {/* <code>show running-config | inc {Enlace}</code> */}
             <code>show running-config | begin {Enlace}</code>
 
             <p>PASO 2 (Validacion Puertos)</p>
@@ -88,48 +88,7 @@ function Zte() {
             {Puertos && (
               <>
                 <p>PASO 3 (Validar Potencias y Alarmas)</p>
-                <code>
-                  sh running-config-interface gpon_onu-
-                  {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
-                    Puertos.split("/")[2]
-                  }:${Puertos.split("/")[3]}`}
-                </code>
-                <code>
-                  show pon power onu-rx gpon_onu-
-                  {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
-                    Puertos.split("/")[2]
-                  }:${Puertos.split("/")[3]}`}
-                </code>
-                <code>
-                  sh pon power attenuation gpon_onu-
-                  {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
-                    Puertos.split("/")[2]
-                  }:${Puertos.split("/")[3]}`}
-                </code>
-                <code>
-                  show gpon onu state gpon_olt-
-                  {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
-                    Puertos.split("/")[2]
-                  } ${Puertos.split("/")[3]}`}
-                </code>
-                <code>
-                  show gpon onu detail-info gpon_onu-
-                  {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
-                    Puertos.split("/")[2]
-                  }:${Puertos.split("/")[3]}`}
-                </code>
-                <code>
-                  show pon onu information gpon_onu-
-                  {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
-                    Puertos.split("/")[2]
-                  }:${Puertos.split("/")[3]}`}
-                </code>
-                <code>
-                  show running-config-interface vport-
-                  {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
-                    Puertos.split("/")[2]
-                  }.${Puertos.split("/")[3]}:1`}
-                </code>
+
                 <code>
                   show gpon onu state gpon_olt-
                   {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
@@ -141,6 +100,48 @@ function Zte() {
                   {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
                     Puertos.split("/")[2]
                   }`}
+                </code>
+
+                <code>
+                  sh pon power attenuation gpon_onu-
+                  {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
+                    Puertos.split("/")[2]
+                  }:${Puertos.split("/")[3]}`}
+                </code>
+
+                <code>
+                  show gpon onu state gpon_olt-
+                  {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
+                    Puertos.split("/")[2]
+                  } ${Puertos.split("/")[3]}`}
+                </code>
+
+                <code>
+                  show pon onu information gpon_onu-
+                  {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
+                    Puertos.split("/")[2]
+                  }:${Puertos.split("/")[3]}`}
+                </code>
+
+                <code>
+                  show running-config-interface vport-
+                  {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
+                    Puertos.split("/")[2]
+                  }.${Puertos.split("/")[3]}:1`}
+                </code>
+
+                <code>
+                  sh running-config-interface gpon_onu-
+                  {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
+                    Puertos.split("/")[2]
+                  }:${Puertos.split("/")[3]}`}
+                </code>
+
+                <code>
+                  show mac interface vport-
+                  {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
+                    Puertos.split("/")[2]
+                  }.${Puertos.split("/")[3]}:1`}
                 </code>
 
                 <p style={{ marginTop: "20px" }}>PASO 4</p>
