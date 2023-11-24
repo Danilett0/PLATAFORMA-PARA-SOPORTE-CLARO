@@ -11,7 +11,7 @@ function Botones(props) {
           props.SetRazonLlamada(true);
         }}
       >
-        Razon de llamada
+        Razones de llamada
       </button>
 
       <button
@@ -21,7 +21,7 @@ function Botones(props) {
           props.SetTipologia(true);
         }}
       >
-        Tipologia de llamada
+        Tipologias de llamada
       </button>
 
       <button
@@ -63,6 +63,16 @@ function Botones(props) {
       >
         IP FIJA
       </button>
+
+      <button
+        className="Button Blue"
+        onClick={() => {
+          props.ResetModulos();
+          props.setPlantillas(true);
+        }}
+      >
+        Plantillas
+      </button>
     </div>
   );
 }
@@ -75,6 +85,7 @@ Botones.propTypes = {
   SetConfAvan: propTypes.func.isRequired,
   SetComandos: propTypes.func.isRequired,
   SetIpFija: propTypes.func.isRequired,
+  setPlantillas: propTypes.func.isRequired,
 };
 
 export default Botones;

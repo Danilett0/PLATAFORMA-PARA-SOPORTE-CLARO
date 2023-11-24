@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import RazonLlamada from "./Components/RazonLlamada";
 import Tipologia from "./Components/Tipologia";
 import Comandos from "./Components/Comandos";
+import Plantillas from "./Components/Plantillas";
 import Botones from "./Components/Botones";
 
 function HFC() {
@@ -11,6 +12,7 @@ function HFC() {
   const [confAvan, SetConfAvan] = useState(false);
   const [comandos, SetComandos] = useState(false);
   const [ipFija, SetIpFija] = useState(false);
+  const [plantillas, setPlantillas] = useState(false);
 
   const ResetModulos = () => {
     SetIpFija(false);
@@ -19,6 +21,7 @@ function HFC() {
     SetTipologia(false);
     SetConfAvan(false);
     SetComandos(false);
+    setPlantillas(false);
   };
 
   return (
@@ -32,6 +35,7 @@ function HFC() {
         SetTipologia={SetTipologia}
         SetConfAvan={SetConfAvan}
         SetComandos={SetComandos}
+        setPlantillas={setPlantillas}
       />
 
       {razonLlamada && <RazonLlamada />}
@@ -100,6 +104,10 @@ function HFC() {
             </div>
           </div>
         </div>
+      )}
+
+      {plantillas && (
+        <Plantillas/>
       )}
     </div>
   );
