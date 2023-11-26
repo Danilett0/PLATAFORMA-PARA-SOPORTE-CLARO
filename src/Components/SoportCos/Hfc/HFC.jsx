@@ -7,7 +7,6 @@ import Botones from "./Components/Botones";
 
 function HFC() {
   const [razonLlamada, SetRazonLlamada] = useState(false);
-  const [perfilEscala, SetPerfilEscala] = useState(false);
   const [tipologia, SetTipologia] = useState(false);
   const [confAvan, SetConfAvan] = useState(false);
   const [comandos, SetComandos] = useState(false);
@@ -17,7 +16,6 @@ function HFC() {
   const ResetModulos = () => {
     SetIpFija(false);
     SetRazonLlamada(false);
-    SetPerfilEscala(false);
     SetTipologia(false);
     SetConfAvan(false);
     SetComandos(false);
@@ -26,12 +24,14 @@ function HFC() {
 
   return (
     <div className="MainHfc">
+      
       <h2>HFC 🐰</h2>
+      <h4>¿Qué te gustaria revisar?</h4>
+
       <Botones
         ResetModulos={ResetModulos}
         SetIpFija={SetIpFija}
         SetRazonLlamada={SetRazonLlamada}
-        SetPerfilEscala={SetPerfilEscala}
         SetTipologia={SetTipologia}
         SetConfAvan={SetConfAvan}
         SetComandos={SetComandos}
@@ -39,21 +39,6 @@ function HFC() {
       />
 
       {razonLlamada && <RazonLlamada />}
-
-      {perfilEscala && (
-        <div className="MainRazonLlamada">
-          <div className="Box-Razones">
-            <div className="Bloque">
-              <div>
-                <span>AGENDAR VISITAS</span> <b>SERVIDES1</b>
-              </div>
-              <div>
-                <span>OTRAS SOLICITUDES</span> <b>SOPNROCCID</b>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {tipologia && <Tipologia />}
 
@@ -106,9 +91,7 @@ function HFC() {
         </div>
       )}
 
-      {plantillas && (
-        <Plantillas/>
-      )}
+      {plantillas && <Plantillas />}
     </div>
   );
 }

@@ -1,10 +1,10 @@
 .Tecnologias {
-  padding: 30px;
+  padding: 20px;
 }
 
 .Tecnologias .Opciones {
   width: 100%;
-  padding: 25px;
+  padding: 20px;
   color: white;
   max-width: 1100px;
   margin: auto;
@@ -20,10 +20,16 @@
 
 .Tecnologias .Opciones .Botones button {
   width: 100%;
-  max-width: 300px;
   color: white;
   margin: 3px 5px;
   padding: 15px !important;
+}
+
+.Tecnologias .Opciones img.ImgAnimadaWork {
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+  display: block;
 }
 
 .OpcionSelecionada {
@@ -35,7 +41,7 @@
 }
 
 .MainRazonLlamada {
-  padding: 25px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,14 +112,14 @@
 }
 
 .MainFibra .EncabezadoFibra {
-  padding: 25px;
+  padding: 20px;
 }
 
 .MainFibra .Botones button {
   width: 100%;
   max-width: 200px;
   color: white;
-  margin: 20px 5px;
+  margin: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -325,7 +331,7 @@
   width: 100%;
   background-color: var(--color-primario);
   margin: 30px auto;
-  padding: 25px;
+  padding: 20px;
   border-radius: 4px;
 }
 
@@ -333,7 +339,8 @@
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 5px 0px;font-weight: bold;
+  margin: 5px 0px;
+  font-weight: bold;
   font-family: rubik, sans-serif;
   color: var(--azul-claro);
 }

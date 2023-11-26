@@ -28,16 +28,6 @@ function Botones(props) {
         className="Button Blue"
         onClick={() => {
           props.ResetModulos();
-          props.SetPerfilEscala(true);
-        }}
-      >
-        Perfiles Escalamiento
-      </button>
-
-      <button
-        className="Button Blue"
-        onClick={() => {
-          props.ResetModulos();
           props.SetConfAvan(true);
         }}
       >
@@ -81,7 +71,6 @@ Botones.propTypes = {
   ResetModulos: propTypes.func.isRequired,
   SetRazonLlamada: propTypes.func.isRequired,
   SetTipologia: propTypes.func.isRequired,
-  SetPerfilEscala: propTypes.func.isRequired,
   SetConfAvan: propTypes.func.isRequired,
   SetComandos: propTypes.func.isRequired,
   SetIpFija: propTypes.func.isRequired,

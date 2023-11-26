@@ -21,8 +21,7 @@ function Fibra() {
     <div className="MainFibra">
       <div className="EncabezadoFibra">
         <h2>Fibra 😏</h2>
-
-        <h4>¿Qué deseas validar?</h4>
+        <h4>¿Qué te gustaria revisar?</h4>
 
         <div className="Botones">
           <button

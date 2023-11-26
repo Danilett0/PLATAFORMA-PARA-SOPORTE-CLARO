@@ -6,7 +6,7 @@ function P2p(props) {
       style={{ display: "flex", justifyContent: "center" }}
       className="MainP2p"
     >
-      <img src="/images/NotFound/Not-Found.webp" alt="" />
+      <img src="/images/Not-Found.webp" alt="" />
     </div>
   );
 }
