@@ -3,29 +3,27 @@ import { FaArrowCircleDown } from "react-icons/fa";
 import { Plantilla } from "../Data/Plantilla";
 
 function Plantillas() {
-  const [pregunta, setpregunta] = useState();
+  const [situacion, setSituacion] = useState();
 
   const handleClick = (id) => {
-    setpregunta(id === pregunta ? "close" : id);
+    setSituacion(id === situacion ? "close" : id);
+  };
+
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text);
   };
 
   return (
-    <div className="Preguntas">
+    <div className="Situaciones">
       {Plantilla.map((plantilla) => (
-        <div className="Pregunta" key={plantilla.id}>
-          <h3 onClick={() => handleClick(plantilla.id)}>
-            <FaArrowCircleDown className="icon" /> {plantilla.pregunta}
-          </h3>
-          <div
-            className="Respuesta"
-            style={{
-              height: pregunta === plantilla.id ? "auto" : "0px",
-              overflow: "hidden",
-            }}
-          >
-            <div>
-              <p>{plantilla.respuesta}</p>
-            </div>
+        <div className="Situacion" key={plantilla.id}>
+          <button className="Button" onClick={() => handleClick(plantilla.id)}>
+            <FaArrowCircleDown className="icon" /> {plantilla.Titulo}
+          </button>
+          <div className="Respuesta" style={{ height: situacion === plantilla.id ? "auto" : "0px", overflow: "hidden"}}>
+            <p onClick={() => copyToClipboard(plantilla.Texto)}>
+              {plantilla.Texto}
+            </p>
           </div>
         </div>
       ))}

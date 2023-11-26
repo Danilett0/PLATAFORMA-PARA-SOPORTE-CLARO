@@ -54,12 +54,12 @@ function Plantilla() {
           <div className="Colx2">
             <div>
               <label>CÓDIGO DE SERVICIO</label>
-              <input required {...register("Codigo del Servicio")} />
+              <input placeholder="ADFH001" required {...register("Codigo del Servicio")} />
             </div>
 
             <div>
               <label>NOMBRE EMPRESA</label>
-              <input required {...register("Nombre Empresa")} />
+              <input placeholder="JD ENTERPRISE SAS" required {...register("Nombre Empresa")} />
             </div>
           </div>
 
@@ -75,38 +75,38 @@ function Plantilla() {
 
             <div>
               <label>DESCRIPCIÓN ACTIVIDAD</label>
-              <input required {...register("Descripcion")} />
+              <input placeholder="Se realizan pruebas de red de acceso..." required {...register("Descripcion")} />
             </div>
           </div>
 
           <div className="Colx2">
             <div>
-              <label>MEDICIÓN OTDR - PIM EQUIPO</label>
-              <input {...register("Medicion OTDR")} />
+              <label>MEDICIÓN OTDR - PIM</label>
+              <input defaultValue={"N/A"} {...register("Medicion OTDR")} />
             </div>
 
             <div>
               <label>RED DE ACCESO (EQUIPO)</label>
-              <input required {...register("Red de Acceso")} />
+              <input placeholder="ZAC-BOG.TRIARA-CP2" required {...register("Red de Acceso")} />
             </div>
           </div>
 
           <div className="Colx2">
             <div>
               <label>PUERTO OLT</label>
-              <input required {...register("Puerto OLT")} />
+              <input placeholder="1/2/12:6" required {...register("Puerto OLT")} />
             </div>
 
             <div>
               <label>OT INSTALACIÓN</label>
-              <input required {...register("OT Instalacion")} />
+              <input placeholder="8783736" required {...register("OT Instalacion")} />
             </div>
           </div>
 
           <div className="Colx2">
             <div>
               <label>CONTACTO DEL CLIENTE:</label>
-              <input required {...register("Contacto Cliente")} />
+              <input placeholder="JEFERSON CASTRO - CEL: 3112329898" required {...register("Contacto Cliente")} />
             </div>
 
             <div>

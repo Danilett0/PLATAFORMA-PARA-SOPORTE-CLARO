@@ -262,13 +262,13 @@
   justify-content: center;
 }
 
-.Form-Plantilla .Plantilla-Generada{
+.Form-Plantilla .Plantilla-Generada {
   background-color: var(--color-primario);
   color: white;
-  margin: 20px;
+  margin: 20px 0px;
   border-radius: 4px;
   text-align: left;
-  border: none;
+  width: 95%;
 }
 
 .Form-Plantilla form {
@@ -321,7 +321,7 @@
   font-family: rubik, sans-serif;
 }
 
-.Preguntas {
+.Situaciones {
   width: 100%;
   background-color: var(--color-primario);
   margin: 30px auto;
@@ -329,34 +329,26 @@
   border-radius: 4px;
 }
 
-.Preguntas .Pregunta h3 {
-  color: var(--color-primario);
-  text-align: left;
-  padding: 10px;
-  background-color: white;
-  border-radius: 3px;
-  cursor: pointer;
+.Situaciones .Situacion button {
+  width: 100%;
   display: flex;
   align-items: center;
-  text-transform: none;
-  font-size: 15px;
+  margin: 5px 0px;font-weight: bold;
+  font-family: rubik, sans-serif;
+  color: var(--azul-claro);
 }
 
-.Preguntas .Pregunta h3 .icon {
+.Situaciones .Situacion button .icon {
   margin-right: 10px;
   color: var(--azul-claro);
   font-size: 19px;
 }
 
-.Preguntas .Pregunta h3:hover {
-  background-color: var(--gris-oscuro);
-  transform: scale(1.02);
-  transition: 1s;
-}
-
-.Preguntas .Pregunta .Respuesta > div p {
+.Situaciones .Situacion .Respuesta > p {
   color: white;
   text-align: left;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 @media (max-width: 767px) {
