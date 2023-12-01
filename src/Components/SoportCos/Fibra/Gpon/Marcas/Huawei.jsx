@@ -100,9 +100,6 @@ function Huawei() {
               <>
                 <p>PASO 2 (Estado Puerto Optico)</p>
                 <code>display service-port {ServPort}</code>
-                {/* <code>
-                  display current-configuration service-port {ServPort}
-                </code> */}
                 <div className="Puertos">
                   <div>
                     <input ref={InpRackRef} placeholder="rack" type="text" />
@@ -123,13 +120,13 @@ function Huawei() {
                   <>
                     <p>PASO 3 (Informacion Puertos y ONT)</p>
                     <code>
-                      display service-port port{" "}
+                      display service-port port
                       {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
                         Puertos.split("/")[2]
                       }`}
                     </code>
                     <code>
-                      display current-configuration ont{" "}
+                      display current-configuration ont
                       {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
                         Puertos.split("/")[2]
                       } ${Puertos.split("/")[3]}`}
@@ -138,29 +135,28 @@ function Huawei() {
                     <p>PASO 4 (Validar Potencias y Alarmas)</p>
                     <code>config</code>
                     <code>
-                      interface gpon{" "}
+                      interface gpon
                       {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}`}
                     </code>
                     <code>
-                      display ont optical-info{" "}
+                      display ont optical-info
                       {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
                     </code>
                     <code>
-                      display ont alarm-state{" "}
+                      display ont alarm-state
                       {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
                     </code>
                     <code>
-                      display ont info{" "}
+                      display ont info
                       {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
                     </code>
                     <code>
-                      display ont port state{" "}
-                      {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}{" "}
+                      display ont port state
+                      {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
                       eth-port all
                     </code>
 
                     <h3>
-                      {" "}
                       validacion<span> Ruta Ping</span>
                     </h3>
 
@@ -244,22 +240,19 @@ function Huawei() {
                                     NODO <span> A1K</span>
                                   </h4>
                                   <code>
-                                    show ip rou vrf pymes-internet {ipValida}
-                                  </code>
-                                  <code>
                                     show run vrf pymes-internet | inc {ipWan}
                                   </code>
                                   <code>show run interface </code>
                                   <code>ping vrf pymes-internet {ipWan} </code>
                                   <code>
-                                    ping vrf pymes-internet {ipWan} re 1500{" "}
+                                    ping vrf pymes-internet {ipWan} re 1500
                                   </code>
                                   <code>
-                                    show arp vrf pymes-internet {ipWan}{" "}
+                                    show arp vrf pymes-internet {ipWan}
                                   </code>
                                   <code>
-                                    <span>Acceso Router:</span> telnet {ipWan}{" "}
-                                    /vrf pymes-internet{" "}
+                                    <span>Acceso Router:</span> telnet {ipWan}
+                                    /vrf pymes-internet
                                   </code>
                                 </div>
 
@@ -268,11 +261,7 @@ function Huawei() {
                                     NODO <span>A9K</span>
                                   </h4>
                                   <code>
-                                    show ip rou vrf pymes-internet {ipValida}
-                                  </code>
-                                  <code>
-                                    show run router static vrf pymes-internet |
-                                    inc {ipWan}{" "}
+                                    show run router static vrf pymes-internet | inc {ipWan}
                                   </code>
                                   <code>show run interface Puerto Logico</code>
                                   <code>ping vrf pymes-internet {ipWan}</code>
@@ -305,7 +294,7 @@ function Huawei() {
                                     show arp vrf ims-sbc-ippbx {ipWan}
                                   </code>
                                   <code>
-                                    <span>Acceso Router:</span> telnet {ipWan}{" "}
+                                    <span>Acceso Router:</span> telnet {ipWan}
                                     /vrf ims-sbc-ippbx
                                   </code>
                                 </div>

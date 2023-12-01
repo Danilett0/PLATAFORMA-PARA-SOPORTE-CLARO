@@ -68,7 +68,6 @@ function Zte() {
         {firtsComan && (
           <>
             <p>PASO 1 (Info, Validacion Clientes OLT)</p>
-            {/* <code>show running-config | inc {Enlace}</code> */}
             <code>show running-config | begin {Enlace}</code>
 
             <p>PASO 2 (Validacion Puertos)</p>
@@ -147,7 +146,6 @@ function Zte() {
                 <p style={{ marginTop: "20px" }}>PASO 4</p>
 
                 <h3 style={{ marginTop: "20px" }}>
-                  {" "}
                   validacion<span> Ruta Ping</span>
                 </h3>
 
@@ -229,21 +227,19 @@ function Zte() {
                                 NODO <span> A1K</span>
                               </h4>
 
-                              <code>
-                                show ip rou vrf pymes-internet {ipValida}
-                              </code>
+                          
                               <code>
                                 show run vrf pymes-internet | inc {ipWan}
                               </code>
                               <code>show run interface PuertoLogico</code>
                               <code>ping vrf pymes-internet {ipWan} </code>
                               <code>
-                                ping vrf pymes-internet {ipWan} re 1500{" "}
+                                ping vrf pymes-internet {ipWan} re 1500
                               </code>
                               <code>show arp vrf pymes-internet {ipWan} </code>
                               <code>
                                 <span>Acceso Router:</span> telnet {ipWan} /vrf
-                                pymes-internet{" "}
+                                pymes-internet
                               </code>
                             </div>
 
@@ -251,12 +247,9 @@ function Zte() {
                               <h4>
                                 NODO <span>A9K</span>
                               </h4>
+                           
                               <code>
-                                show ip rou vrf pymes-internet {ipValida}
-                              </code>
-                              <code>
-                                show run router static vrf pymes-internet | inc{" "}
-                                {ipWan}{" "}
+                                show run router static vrf pymes-internet | inc {ipWan}
                               </code>
                               <code>show run interface PuertoLogico</code>
                               <code>ping vrf pymes-internet {ipWan}</code>

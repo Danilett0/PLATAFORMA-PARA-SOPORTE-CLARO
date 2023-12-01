@@ -13,7 +13,7 @@ function RazonLlamada(props) {
             <span>B7 </span> SOLICITUD AJUSTE WIFI
           </div>
           <div>
-            <span>FTI</span> FALLA INTERNET FTTH{" "}
+            <span>FTI</span> FALLA INTERNET FTTH
           </div>
           <div>
             <span>I1 </span> BANDA ANCHA PROBLEMA APROVISIONAMIENTO
