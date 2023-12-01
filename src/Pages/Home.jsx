@@ -8,7 +8,7 @@ function Home() {
   return (
     <main className="HomePage">
       <div>
-        <h1>Bienvenido a tu espacio <br/> de trabajo 💕 </h1>
+        <h1>Bienvenido a tu espacio <br/> de trabajo 🌻</h1>
         <Player
           autoplay
           loop
@@ -22,7 +22,7 @@ function Home() {
         >
           Ingresar
         </Link>
-        <code>By Daniletto</code>
+        <code><b>By Daniletto</b></code>
       </div>
     </main>
   );
