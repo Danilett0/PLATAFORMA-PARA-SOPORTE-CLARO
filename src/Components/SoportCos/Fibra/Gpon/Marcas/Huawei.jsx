@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+Loimport React, { useRef, useState } from "react";
 import {
   BsFillTelephoneFill,
   BsLaptop,
@@ -120,14 +120,12 @@ function Huawei() {
                   <>
                     <p>PASO 3 (Informacion Puertos y ONT)</p>
                     <code>
-                      display service-port port
-                      {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
+                      display service-port port {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
                         Puertos.split("/")[2]
                       }`}
                     </code>
                     <code>
-                      display current-configuration ont
-                      {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
+                      display current-configuration ont {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
                         Puertos.split("/")[2]
                       } ${Puertos.split("/")[3]}`}
                     </code>
