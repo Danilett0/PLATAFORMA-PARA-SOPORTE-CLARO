@@ -120,12 +120,12 @@ function Huawei() {
                   <>
                     <p>PASO 3 (Informacion Puertos y ONT)</p>
                     <code>
-                      display service-port port {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
+                      display service-port port {` ${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
                         Puertos.split("/")[2]
                       }`}
                     </code>
                     <code>
-                      display current-configuration ont {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
+                      display current-configuration ont {` ${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
                         Puertos.split("/")[2]
                       } ${Puertos.split("/")[3]}`}
                     </code>
@@ -134,23 +134,23 @@ function Huawei() {
                     <code>config</code>
                     <code>
                       interface gpon
-                      {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}`}
+                      {` ${Puertos.split("/")[0]}/${Puertos.split("/")[1]}`}
                     </code>
                     <code>
                       display ont optical-info
-                      {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
+                      {` ${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
                     </code>
                     <code>
                       display ont alarm-state
-                      {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
+                      {` ${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
                     </code>
                     <code>
                       display ont info
-                      {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
+                      {` ${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
                     </code>
                     <code>
                       display ont port state
-                      {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
+                      {` ${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
                       eth-port all
                     </code>
 
