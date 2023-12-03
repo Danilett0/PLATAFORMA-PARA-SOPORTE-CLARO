@@ -110,6 +110,11 @@
   text-align: center;
 }
 
+.mainSupportTool .MainP2p img {
+  width: 100%;
+  max-width: 500px;
+}
+
 .mainSupportTool .mainGpon {
   padding-top: 30px;
   background: #073953;
