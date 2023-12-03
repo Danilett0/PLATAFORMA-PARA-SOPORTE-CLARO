@@ -55,7 +55,7 @@ h3 {
   font-size: 20px;
 }
 
-/* Enlaces */
+/* enlaces */
 a {
   color: white;
   text-transform: uppercase;
@@ -83,7 +83,7 @@ p {
   color: var(--color-primario);
 }
 
-/* Botones */
+/* buttons */
 .Button {
   padding: 10px 15px !important;
   border-radius: 3px;
@@ -101,7 +101,7 @@ p {
   transform: scale(1.03);
 }
 
-/* Colores específicos para botones */
+/* Colores específicos para buttons */
 .Red {
   background-color: var(--rojo-claro);
 }

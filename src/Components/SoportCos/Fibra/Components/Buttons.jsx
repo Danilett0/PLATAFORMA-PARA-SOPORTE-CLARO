@@ -3,7 +3,7 @@ import propTypes from "prop-types";
 
 function Buttons(props) {
   return (
-    <div className="Botones">
+    <div className="menuOptions">
       <button
         onClick={() => {
           props.resetStates();
@@ -13,7 +13,7 @@ function Buttons(props) {
       >
         GPON
       </button>
-      {/* <button
+      <button
         onClick={() => {
           props.resetStates();
           props.setP2p(true);
@@ -21,7 +21,8 @@ function Buttons(props) {
         className="Button Blue"
       >
         P2P
-      </button> */}
+      </button>
+
       <button
         onClick={() => {
           props.resetStates();
@@ -59,8 +60,9 @@ Buttons.propTypes = {
   resetStates: propTypes.func.isRequired,
   setKm: propTypes.func.isRequired,
   setPlantilla: propTypes.func.isRequired,
-  setP2p: propTypes.func.isRequired,
+  setIpFija: propTypes.func.isRequired,
   setGpon: propTypes.func.isRequired,
+  setP2p: propTypes.func.isRequired,
 };
 
 export default Buttons;

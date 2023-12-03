@@ -1,9 +1,9 @@
 import React from "react";
 import propTypes from "prop-types";
 
-function Botones(props) {
+function Buttons(props) {
   return (
-    <div className="BtnOpciones">
+    <div className="menuOptions">
       <button
         className="Button Blue"
         onClick={() => {
@@ -38,10 +38,10 @@ function Botones(props) {
         className="Button Blue"
         onClick={() => {
           props.ResetModulos();
-          props.SetComandos(true);
+          props.Setcommands(true);
         }}
       >
-        Comandos RR
+        commands RR
       </button>
 
       <button
@@ -67,14 +67,14 @@ function Botones(props) {
   );
 }
 
-Botones.propTypes = {
+Buttons.propTypes = {
   ResetModulos: propTypes.func.isRequired,
   SetRazonLlamada: propTypes.func.isRequired,
   SetTipologia: propTypes.func.isRequired,
   SetConfAvan: propTypes.func.isRequired,
-  SetComandos: propTypes.func.isRequired,
+  Setcommands: propTypes.func.isRequired,
   SetIpFija: propTypes.func.isRequired,
   setPlantillas: propTypes.func.isRequired,
 };
 
-export default Botones;
+export default Buttons;

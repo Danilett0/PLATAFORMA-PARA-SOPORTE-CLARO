@@ -2,9 +2,9 @@ import React from "react";
 
 function KmCierre(props) {
   return (
-    <div className="MainRazonLlamada">
-      <div className="Box-Razones">
-        <div className="Bloque">
+    <div className="maincontainers">
+      <div className="container">
+        <div className="boxContainer">
           <h3>P1 INTERNET (SOLUCION PRIMER CONTACTO)</h3>
 
           <div>
@@ -12,7 +12,7 @@ function KmCierre(props) {
             ZTE)
           </div>
           <div>
-            <span>KM3511</span> EQUIPOS HARDWARE CLARO BLOQUEADOS (REINICIO DE
+            <span>KM3511</span> EQUIPOS HARDWARE CLARO boxContainerADOS (REINICIO DE
             CPE)
           </div>
           <div>
@@ -52,7 +52,7 @@ function KmCierre(props) {
 
           <h3>P3 INTERNET (SOLUCION EN PRIMER CONTACTO)</h3>
           <div>
-            <span>KM3514</span> SIN WIFI WIFI BLOQUEADO RESET OK
+            <span>KM3514</span> SIN WIFI WIFI boxContainerADO RESET OK
           </div>
           <div>
             <span>KM3364 </span> LENTITUD FALLA EQUIPO CLARO

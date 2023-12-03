@@ -2,9 +2,9 @@ import React from "react";
 
 function RazonLlamada(props) {
   return (
-    <div className="MainRazonLlamada">
-      <div className="Box-Razones">
-        <div className="Bloque">
+    <div className="maincontainers">
+      <div className="container">
+        <div className="boxContainer">
           <h3>Internet</h3>
           <div>
             <span>B1 </span> CLIENTE SIN SOLUCION
@@ -55,7 +55,7 @@ function RazonLlamada(props) {
           </div>
         </div>
 
-        <div className="Bloque">
+        <div className="boxContainer">
           <h3>Telefonia</h3>
           <div>
             <span> C1 </span>SINTONO NIVEL OK

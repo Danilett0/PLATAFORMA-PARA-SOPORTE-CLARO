@@ -9,15 +9,16 @@ function SuportCos() {
   const [Hfc, SetHfc] = useState(false);
 
   return (
-    <div className="Tecnologias">
-      <div className="Opciones">
+    <div className="mainSupportTool">
+
+      <div className="options">
         <h2>
           Selecciona un tipo de conexión <br /> para continuar
         </h2>
 
         <img className="ImgAnimadaWork" src="/images/working.svg" alt="" />
         
-        <div className="Botones">
+        <div className="buttons">
           <button
             onClick={() => {
               SetFibra(true);
@@ -39,9 +40,8 @@ function SuportCos() {
         </div>
       </div>
 
-      <div className="OpcionSelecionada">
+      <div className="selectedOption">
         {Fibra && <ComFibra />}
-
         {Hfc && <CompHfc />}
       </div>
     </div>

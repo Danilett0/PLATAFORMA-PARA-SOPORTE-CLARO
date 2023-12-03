@@ -1,10 +1,10 @@
 import React from "react";
 
-function Comandos(props) {
+function commands() {
   return (
-    <div className="MainRazonLlamada">
-      <div className="Box-Razones">
-        <div className="Bloque">
+    <div className="maincontainers">
+      <div className="container">
+        <div className="boxContainer">
           <h4>LLAMADA DE SERVICIO</h4>
           <div>
             <span>Crear</span> <b>SHIFT F11</b>
@@ -14,7 +14,7 @@ function Comandos(props) {
           </div>
         </div>
 
-        <div className="Bloque">
+        <div className="boxContainer">
           <h4>VALIDAR SI ES CUENTA PYMES</h4>
           <div>
             <span>Estrato</span> <b>SHIFT F4 + SHIFT F2</b>
@@ -24,7 +24,7 @@ function Comandos(props) {
           </div>
         </div>
 
-        <div className="Bloque">
+        <div className="boxContainer">
           <h4>CREAR OT</h4>
           <div>
             <span>Crear</span> <b>SHIFT F3 + F6 (F2 avanzar)</b>
@@ -35,8 +35,8 @@ function Comandos(props) {
         </div>
       </div>
 
-      <div className="Box-Razones">
-        <div className="Bloque">
+      <div className="container">
+        <div className="boxContainer">
           <h4>MARCACIONES O PQR</h4>
           <div>
             <span>Crear</span> <b>SHIFT F10</b>
@@ -46,7 +46,7 @@ function Comandos(props) {
           </div>
         </div>
 
-        <div className="Bloque">
+        <div className="boxContainer">
           <h4>Terminar PQR</h4>
           <div>
             <span>ABIERTA</span> <b>F5 + F3</b>
@@ -56,22 +56,18 @@ function Comandos(props) {
           </div>
         </div>
 
-        <div className="Bloque">
+        <div className="boxContainer">
           <h4>BUSQUEDA DE CUENTA</h4>
           <div>
-          <span>CC / NIT</span> <b>SHIFT F9 + SHIFT F3</b>
+            <span>CC / NIT</span> <b>SHIFT F9 + SHIFT F3</b>
           </div>
           <div>
-          <span>TEL</span> <b>SHIFT F2 (60 + IND + NUMERO)</b>
+            <span>TEL</span> <b>SHIFT F2 (60 + IND + NUMERO)</b>
           </div>
         </div>
-    
-      </div>
-      <div className="Box-Razones">
-       
       </div>
     </div>
   );
 }
 
-export default Comandos;
+export default commands;

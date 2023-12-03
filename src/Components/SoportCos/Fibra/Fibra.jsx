@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Gpon from "./Gpon/Gpon";
 import P2p from "./PSP/P2p";
-import Plantilla from "./Components/Plantilla";
+import Plantilla from "./Components/PlantMasiva";
 import KmCierre from "./Components/KmCierre";
 import Buttons from "./Components/Buttons";
 import IpFija from "./Components/IpFija";
@@ -22,7 +22,7 @@ function Fibra() {
   };
 
   return (
-    <div className="MainFibra">
+    <div className="mainFibraOptica">
       <div className="EncabezadoFibra">
         <h2>Fibra 😏</h2>
         <h4>¿Qué te gustaria revisar?</h4>
@@ -30,7 +30,7 @@ function Fibra() {
         <Buttons
           resetStates={resetStates}
           setGpon={setGpon}
-          // setP2p={setP2p}
+          setP2p={setP2p}
           setPlantilla={setPlantilla}
           setKm={setKm}
           setIpFija={setIp}
@@ -39,13 +39,9 @@ function Fibra() {
 
       <div>
         {gpon && <Gpon />}
-
         {p2p && <P2p />}
-
         {plantilla && <Plantilla />}
-
         {Ip && <IpFija />}
-
         {Km && <KmCierre />}
       </div>
     </div>

@@ -10,12 +10,12 @@ function Huawei() {
   const [firtsComan, setFirtsComan] = useState(false);
   const [ipValida, SetIpvalida] = useState("");
   const [ipWan, SetIpWan] = useState("");
-  const [Enlace, setEnlace] = useState("");
+  const [enlace, setenlace] = useState("");
   const [ServPort, setServPort] = useState("");
   const [Puertos, setPuertos] = useState("");
   const [telefonia, setTelefonia] = useState(false);
   const [internet, setInternet] = useState(false);
-  const InputEnlaceRef = useRef();
+  const InputenlaceRef = useRef();
   const InpServPortRef = useRef();
   const InpRackRef = useRef();
   const InpSlotRef = useRef();
@@ -24,19 +24,19 @@ function Huawei() {
   const InpIpValRef = useRef();
   const InpIpWanRef = useRef();
 
-  const ValEnlace = () => {
+  const Valenlace = () => {
     if (
-      InputEnlaceRef.current.value !== undefined &&
-      InputEnlaceRef.current.value !== ""
+      InputenlaceRef.current.value !== undefined &&
+      InputenlaceRef.current.value !== ""
     ) {
       setFirtsComan(true);
-      setEnlace(InputEnlaceRef.current.value);
+      setenlace(InputenlaceRef.current.value);
     } else {
       setFirtsComan("");
-      setEnlace("");
+      setenlace("");
       setServPort("");
       setPuertos("");
-      alert("Enlace es necesario para continuar");
+      alert("enlace es necesario para continuar");
     }
   };
 
@@ -68,22 +68,22 @@ function Huawei() {
   };
 
   return (
-    <div className="MainHuawei">
+    <div className="equipmentBrandselected">
       <h3>validacion <span> red de acceso HUAWEI</span></h3>
 
-      <div className="Enlace">
-        <input ref={InputEnlaceRef} type="text" placeholder="Enlace" />
-        <button onClick={ValEnlace} className="Button Green">
+      <div className="enlace">
+        <input ref={InputenlaceRef} type="text" placeholder="enlace" />
+        <button onClick={Valenlace} className="Button Green">
           <BsFillRocketTakeoffFill size={20} />
         </button>
       </div>
 
-      <div className="Comandos">
+      <div className="commands">
         {firtsComan && (
           <>
             <p>PASO 1 (Configuracion del sistema)</p>
-            <code>display current-configuration | include {Enlace}</code>
-            <div className="Enlace">
+            <code>display current-configuration | include {enlace}</code>
+            <div className="enlace">
               <input
                 ref={InpServPortRef}
                 type="text"
@@ -99,7 +99,7 @@ function Huawei() {
                 <p>PASO 2 (Estado Puerto Optico)</p>
                 <code>display service-port {ServPort}</code>
                 <div className="Puertos">
-                  <div className="Inp-Puertos">
+                  <div className="inpPuertos">
                     <input ref={InpRackRef} placeholder="rack" type="text" />
                     <input ref={InpSlotRef} placeholder="slot" type="text" />
                     <input ref={InpPuertoRef} placeholder="puerto" type="text" />
@@ -186,29 +186,29 @@ function Huawei() {
                         </div>
                         {ipWan && (
                           <>
-                            <h3 className="TitleComandos">
+                            <h3 className="commandsTitle">
                               Seleccione Tecnologia
                             </h3>
 
-                            <div className="IconsOpciones">
+                            <div className="iconOptions">
                               <BsLaptop
                                 onClick={() => {
                                   setInternet(true);
                                   setTelefonia(false);
                                 }}
-                                title="Comandos Internet"
+                                title="commands Internet"
                               />
                               <BsFillTelephoneFill
                                 onClick={() => {
                                   setInternet(false);
                                   setTelefonia(true);
                                 }}
-                                title="Comandos Telefonia"
+                                title="commands Telefonia"
                               />
                             </div>
 
                             {internet && (
-                              <div className="ComandosIps">
+                              <div className="commandsIps">
                                 <div>
                                   <h4>NODO <span> A1K</span></h4>
                                   <code>show run vrf pymes-internet | inc {ipWan}</code>
@@ -232,7 +232,7 @@ function Huawei() {
                             )}
 
                             {telefonia && (
-                              <div className="ComandosIps">
+                              <div className="commandsIps">
                                 <div>
                                   <h4>NODO <span> A1K</span></h4>
                                   <code>sh ip rou vrf ims-sbc-ippbx {ipWan}</code>

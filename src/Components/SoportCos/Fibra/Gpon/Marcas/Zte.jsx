@@ -10,11 +10,11 @@ function Zte() {
   const [firtsComan, setFirtsComan] = useState(false);
   const [ipValida, SetIpvalida] = useState("");
   const [ipWan, SetIpWan] = useState("");
-  const [Enlace, setEnlace] = useState("");
+  const [enlace, setenlace] = useState("");
   const [Puertos, setPuertos] = useState("");
   const [telefonia, setTelefonia] = useState(false);
   const [internet, setInternet] = useState(false);
-  const InputEnlaceRef = useRef();
+  const InputenlaceRef = useRef();
   const InpRackRef = useRef();
   const InpSlotRef = useRef();
   const InpPuertoRef = useRef();
@@ -22,18 +22,18 @@ function Zte() {
   const InpIpValRef = useRef();
   const InpIpWanRef = useRef();
 
-  const ValEnlace = () => {
+  const Valenlace = () => {
     if (
-      InputEnlaceRef.current.value !== undefined &&
-      InputEnlaceRef.current.value !== ""
+      InputenlaceRef.current.value !== undefined &&
+      InputenlaceRef.current.value !== ""
     ) {
       setFirtsComan(true);
-      setEnlace(InputEnlaceRef.current.value);
+      setenlace(InputenlaceRef.current.value);
     } else {
       setFirtsComan("");
-      setEnlace("");
+      setenlace("");
       setPuertos("");
-      alert("Enlace es necesario para continuar");
+      alert("enlace es necesario para continuar");
     }
   };
 
@@ -52,28 +52,28 @@ function Zte() {
   };
 
   return (
-    <div className="MainHuawei">
+    <div className="equipmentBrandselected">
       <h3>
         validacion <span> red de acceso ZTE</span>
       </h3>
 
-      <div className="Enlace">
-        <input ref={InputEnlaceRef} type="text" placeholder="Enlace" />
-        <button onClick={ValEnlace} className="Button Green">
+      <div className="enlace">
+        <input ref={InputenlaceRef} type="text" placeholder="enlace" />
+        <button onClick={Valenlace} className="Button Green">
           <BsFillRocketTakeoffFill size={20} />
         </button>
       </div>
 
-      <div className="Comandos">
+      <div className="commands">
         {firtsComan && (
           <>
             <p>PASO 1 (Info, Validacion Clientes OLT)</p>
-            <code>show running-config | begin {Enlace}</code>
+            <code>show running-config | begin {enlace}</code>
 
             <p>PASO 2 (Validacion Puertos)</p>
 
             <div className="Puertos">
-              <div className="Inp-Puertos">
+              <div className="inpPuertos">
                 <input ref={InpRackRef} placeholder="rack" type="text" />
                 <input ref={InpSlotRef} placeholder="slot" type="text" />
                 <input ref={InpPuertoRef} placeholder="port" type="text" />
@@ -144,27 +144,27 @@ function Zte() {
                     </div>
                     {ipWan && (
                       <>
-                        <h3 className="TitleComandos">Seleccione Tecnologia</h3>
+                        <h3 className="commandsTitle">Seleccione Tecnologia</h3>
 
-                        <div className="IconsOpciones">
+                        <div className="iconOptions">
                           <BsLaptop
                             onClick={() => {
                               setInternet(true);
                               setTelefonia(false);
                             }}
-                            title="Comandos Internet"
+                            title="commands Internet"
                           />
                           <BsFillTelephoneFill
                             onClick={() => {
                               setInternet(false);
                               setTelefonia(true);
                             }}
-                            title="Comandos Telefonia"
+                            title="commands Telefonia"
                           />
                         </div>
 
                         {internet && (
-                          <div className="ComandosIps">
+                          <div className="commandsIps">
                             <div>
                               <h4>NODO <span> A1K</span></h4>
 
@@ -190,7 +190,7 @@ function Zte() {
                         )}
 
                         {telefonia && (
-                          <div className="ComandosIps">
+                          <div className="commandsIps">
                             <div>
                               <h4>NODO <span> A1K</span></h4>
                               <code>sh ip rou vrf ims-sbc-ippbx {ipWan}</code>

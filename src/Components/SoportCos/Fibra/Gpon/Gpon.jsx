@@ -7,10 +7,10 @@ function Gpon(props) {
   const [zte, setZte] = useState(false);
 
   return (
-    <div className="MainGpon">
+    <div className="mainGpon">
 
       <h4>Selecciona la marca del equipo <br/> para continuar</h4>
-      <div className="Marcas">
+      <div className="equipmentBrands">
         <button
           onClick={() => {
             setHuawei(true);

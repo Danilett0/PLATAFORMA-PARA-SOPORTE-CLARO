@@ -14,13 +14,13 @@ function Plantillas() {
   };
 
   return (
-    <div className="Situaciones">
+    <div className="mainPlantillaHfc">
       {Plantilla.map((plantilla) => (
-        <div className="Situacion" key={plantilla.id}>
+        <div className="Plantilla" key={plantilla.id}>
           <button className="Button" onClick={() => handleClick(plantilla.id)}>
             <FaArrowCircleDown className="icon" /> {plantilla.Titulo}
           </button>
-          <div className="Respuesta" style={{ height: situacion === plantilla.id ? "auto" : "0px", overflow: "hidden"}}>
+          <div className="templateDescription" style={{ height: situacion === plantilla.id ? "auto" : "0px", overflow: "hidden"}}>
             <p onClick={() => copyToClipboard(plantilla.Texto)}>
               {plantilla.Texto}
             </p>

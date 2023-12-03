@@ -22,7 +22,7 @@ function Plantilla() {
   };
 
   return (
-    <div className="Form-Plantilla">
+    <div className="mainPlantillaMasiva">
       {!enviForm ? (
         <form
           ref={FormRef}
@@ -75,7 +75,7 @@ function Plantilla() {
 
             <div>
               <label>DESCRIPCIÓN ACTIVIDAD</label>
-              <input placeholder="Se realizan pruebas de red de acceso..." required {...register("Descripcion")} />
+              <input placeholder="Se realizan pruebas de red de acceso..." required {...register("templateDescription")} />
             </div>
           </div>
 
@@ -122,7 +122,7 @@ function Plantilla() {
           <input required className="Button Red" type="submit" />
         </form>
       ) : (
-        <button className="Button Plantilla-Generada" onClick={copyToClipboard}>
+        <button className="Button plantillaGenerada" onClick={copyToClipboard}>
           {Object.entries(Informacion)
             .filter(([key, value]) => value !== "")
             .map(([key, value]) => (
