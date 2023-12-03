@@ -73,7 +73,7 @@ function Zte() {
             <p>PASO 2 (Validacion Puertos)</p>
 
             <div className="Puertos">
-              <div>
+              <div className="Inp-Puertos">
                 <input ref={InpRackRef} placeholder="rack" type="text" />
                 <input ref={InpSlotRef} placeholder="slot" type="text" />
                 <input ref={InpPuertoRef} placeholder="port" type="text" />

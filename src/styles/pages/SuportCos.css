@@ -105,14 +105,14 @@
   text-align: center;
 }
 
+.MainFibra .EncabezadoFibra {
+  padding: 20px;
+}
+
 .MainFibra .Botones {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.MainFibra .EncabezadoFibra {
-  padding: 20px;
 }
 
 .MainFibra .Botones button {
@@ -220,6 +220,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.MainFibra .Comandos .Puertos .Inp-Puertos {
+  display: flex;
 }
 
 .MainFibra .Comandos .Puertos div input {
@@ -367,11 +371,39 @@
     flex-wrap: wrap;
   }
 
+  .MainFibra .Botones {
+    flex-direction: column;
+  }
+
+  .MainFibra .Comandos {
+    text-align: center;
+  }
+
   .Form-Plantilla form .Colx2 {
     flex-direction: column;
   }
+
+  .MainFibra .Comandos .ComandosIps {
+    flex-direction: column;
+  }
+
+  .MainFibra .Comandos .ComandosIps > div {
+    width: 100%;
+    margin: 5px 0px;
+  }
+
   .Form-Plantilla form .Colx2 div {
     width: 100%;
     margin: 5px 0px;
+  }
+
+  .Bloque div {
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .Bloque div span {
+    width: 100%;
   }
 }

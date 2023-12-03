@@ -99,14 +99,10 @@ function Huawei() {
                 <p>PASO 2 (Estado Puerto Optico)</p>
                 <code>display service-port {ServPort}</code>
                 <div className="Puertos">
-                  <div>
+                  <div className="Inp-Puertos">
                     <input ref={InpRackRef} placeholder="rack" type="text" />
                     <input ref={InpSlotRef} placeholder="slot" type="text" />
-                    <input
-                      ref={InpPuertoRef}
-                      placeholder="puerto"
-                      type="text"
-                    />
+                    <input ref={InpPuertoRef} placeholder="puerto" type="text" />
                     <input ref={InpOnuRef} placeholder="onu" type="text" />
                   </div>
                   <button onClick={ValPuertos} className="Button Green">
