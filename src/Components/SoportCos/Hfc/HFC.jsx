@@ -5,7 +5,7 @@ import Comandos from "./Components/Comandos";
 import Plantillas from "./Components/Plantillas";
 import Buttons from "./Components/Buttons";
 import ConfAvanzadas from "./Components/ConfAvanzadas";
-import IpFija from "../Fibra/Components/IpFija";
+import IpFija from "../Hfc/Components/IpFija";
 
 function HFC() {
   const [razonLlamada, SetRazonLlamada] = useState(false);
