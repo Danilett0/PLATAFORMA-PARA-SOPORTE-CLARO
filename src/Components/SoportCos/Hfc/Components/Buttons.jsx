@@ -11,7 +11,7 @@ function Buttons(props) {
           props.SetRazonLlamada(true);
         }}
       >
-        Razones de llamada
+        Razon de llamada
       </button>
 
       <button
@@ -21,7 +21,7 @@ function Buttons(props) {
           props.SetTipologia(true);
         }}
       >
-        Tipologias de llamada
+        Tipologias
       </button>
 
       <button
@@ -41,7 +41,7 @@ function Buttons(props) {
           props.Setcommands(true);
         }}
       >
-        commands RR
+        Comandos RR
       </button>
 
       <button

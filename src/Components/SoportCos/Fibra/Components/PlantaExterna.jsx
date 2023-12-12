@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 
-function Plantilla() {
+function PlantaExterna() {
   const FormRef = useRef();
   const [enviForm, setEnvioForm] = useState(false);
   const [Informacion, setInformacion] = useState({});
@@ -136,4 +136,4 @@ function Plantilla() {
   );
 }
 
-export default Plantilla;
+export default PlantaExterna;

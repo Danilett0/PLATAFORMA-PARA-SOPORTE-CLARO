@@ -26,11 +26,11 @@ function Buttons(props) {
       <button
         onClick={() => {
           props.resetStates();
-          props.setPlantilla(true);
+          props.setPlantaExterna(true);
         }}
         className="Button Blue"
       >
-        PLANTILLA PLANTA
+        PLANTA EXTERNA
       </button>
 
       <button
@@ -52,6 +52,16 @@ function Buttons(props) {
       >
         KM CIERRE
       </button>
+
+      <button
+        onClick={() => {
+          props.resetStates();
+          props.setPlantillas(true);
+        }}
+        className="Button Blue"
+      >
+        PLANTILLAS
+      </button>
     </div>
   );
 }
@@ -59,10 +69,11 @@ function Buttons(props) {
 Buttons.propTypes = {
   resetStates: propTypes.func.isRequired,
   setKm: propTypes.func.isRequired,
-  setPlantilla: propTypes.func.isRequired,
+  setPlantaExterna: propTypes.func.isRequired,
   setIpFija: propTypes.func.isRequired,
   setGpon: propTypes.func.isRequired,
   setP2p: propTypes.func.isRequired,
+  setPlantillas: propTypes.func.isRequired,
 };
 
 export default Buttons;
