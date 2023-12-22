@@ -188,6 +188,11 @@
 
 .mainSupportTool .equipmentBrandselected .commands code {
   margin: 5px 0px;
+  cursor: pointer;
+}
+
+.mainSupportTool .equipmentBrandselected .commands code:hover{
+  color: var(--azul-claro);
 }
 
 .mainSupportTool .equipmentBrandselected .commands .iconOptions svg {

@@ -21,6 +21,13 @@ function Zte() {
   const InpIpValRef = useRef();
   const InpIpWanRef = useRef();
 
+  const copyToClipboard = (e) => {
+    navigator.clipboard.writeText(e.target.innerText)
+      .then(() => console.log("Texto copiado"))
+      .catch(err => console.error('Error al copiar el texto: ', err));
+  };
+
+
   const Valenlace = () => {
     const valorInput = InputenlaceRef.current.value.trim();
 
@@ -84,7 +91,7 @@ function Zte() {
         {firtsComan && (
           <>
             <p>PASO 1 (Info, Validacion Clientes OLT)</p>
-            <code>show running-config | begin {enlace}</code>
+            <code onClick={copyToClipboard} >show running-config | begin {enlace}</code>
 
             <p>PASO 2 (Validacion Puertos)</p>
 
@@ -104,14 +111,14 @@ function Zte() {
               <>
                 <p>PASO 3 (Validar Potencias y Alarmas)</p>
 
-                <code>show gpon onu state gpon_olt-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}`}</code>
-                <code>show pon power onu-rx gpon_olt-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}`}</code>
-                <code>sh pon power attenuation gpon_onu-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}:${Puertos.split("/")[3]}`}</code>
-                <code>show gpon onu state gpon_olt-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}</code>
-                <code>show pon onu information gpon_onu-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}:${Puertos.split("/")[3]}`}</code>
-                <code>show running-config-interface vport-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}.${Puertos.split("/")[3]}:1`}</code>
-                <code>sh running-config-interface gpon_onu-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}:${Puertos.split("/")[3]}`}</code>
-                <code>show mac interface vport-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}.${Puertos.split("/")[3]}:1`}
+                <code onClick={copyToClipboard} >show gpon onu state gpon_olt-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}`}</code>
+                <code onClick={copyToClipboard} >show pon power onu-rx gpon_olt-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}`}</code>
+                <code onClick={copyToClipboard} >sh pon power attenuation gpon_onu-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}:${Puertos.split("/")[3]}`}</code>
+                <code onClick={copyToClipboard} >show gpon onu state gpon_olt-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}</code>
+                <code onClick={copyToClipboard} >show pon onu information gpon_onu-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}:${Puertos.split("/")[3]}`}</code>
+                <code onClick={copyToClipboard} >show running-config-interface vport-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}.${Puertos.split("/")[3]}:1`}</code>
+                <code onClick={copyToClipboard} >sh running-config-interface gpon_onu-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}:${Puertos.split("/")[3]}`}</code>
+                <code onClick={copyToClipboard} >show mac interface vport-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}.${Puertos.split("/")[3]}:1`}
                 </code>
 
                 <p style={{ marginTop: "20px" }}>PASO 4</p>
@@ -124,7 +131,7 @@ function Zte() {
 
                 {ipValida && (
                   <>
-                    <code style={{ margin: "10px 0px" }}> show ip rou vrf pymes-internet {ipValida} </code>
+                    <code onClick={copyToClipboard}  style={{ margin: "10px 0px" }}> show ip rou vrf pymes-internet {ipValida} </code>
 
                     <div className="Ips">
                       <input ref={InpIpWanRef} onChange={ValIpWan} type="text" placeholder="IP WAN"/>
@@ -155,23 +162,23 @@ function Zte() {
                             <div>
                               <h4>NODO <span> A1K</span></h4>
 
-                              <code>show run vrf pymes-internet | inc {ipWan}</code>
-                              <code>show run interface PuertoLogico</code>
-                              <code>ping vrf pymes-internet {ipWan} </code>
-                              <code>ping vrf pymes-internet {ipWan} re 1500</code>
-                              <code>show arp vrf pymes-internet {ipWan} </code>
-                              <code><span>Acceso Router:</span> telnet {ipWan} /vrf pymes-internet</code>
+                              <code onClick={copyToClipboard} >show run vrf pymes-internet | inc {ipWan}</code>
+                              <code onClick={copyToClipboard} >show run interface PuertoLogico</code>
+                              <code onClick={copyToClipboard} >ping vrf pymes-internet {ipWan} </code>
+                              <code onClick={copyToClipboard} >ping vrf pymes-internet {ipWan} re 1500</code>
+                              <code onClick={copyToClipboard} >show arp vrf pymes-internet {ipWan} </code>
+                              <code onClick={copyToClipboard} ><span>Acceso Router:</span> telnet {ipWan} /vrf pymes-internet</code>
                             </div>
 
                             <div>
                               <h4>NODO <span>A9K</span></h4>
 
-                              <code>show run router static vrf pymes-internet | inc {ipWan}</code>
-                              <code>show run interface PuertoLogico</code>
-                              <code>ping vrf pymes-internet {ipWan}</code>
-                              <code>ping vrf pymes-internet {ipWan} co 1500</code>
-                              <code>show arp vrf pymes-internet {ipWan}</code>
-                              <code><span>Acceso Router:</span> telnet vrf pymes-internet {ipWan}</code>
+                              <code onClick={copyToClipboard} >show run router static vrf pymes-internet | inc {ipWan}</code>
+                              <code onClick={copyToClipboard} >show run interface PuertoLogico</code>
+                              <code onClick={copyToClipboard} >ping vrf pymes-internet {ipWan}</code>
+                              <code onClick={copyToClipboard} >ping vrf pymes-internet {ipWan} co 1500</code>
+                              <code onClick={copyToClipboard} >show arp vrf pymes-internet {ipWan}</code>
+                              <code onClick={copyToClipboard} ><span>Acceso Router:</span> telnet vrf pymes-internet {ipWan}</code>
                             </div>
                           </div>
                         )}
@@ -180,20 +187,20 @@ function Zte() {
                           <div className="commandsIps">
                             <div>
                               <h4>NODO <span> A1K</span></h4>
-                              <code>sh ip rou vrf ims-sbc-ippbx {ipWan}</code>
-                              <code>show run interface PuertoLogico</code>
-                              <code>ping vrf ims-sbc-ippbx {ipWan}</code>
-                              <code>show arp vrf ims-sbc-ippbx {ipWan}</code>
-                              <code><span>Acceso Router:</span> telnet {ipWan} /vrf ims-sbc-ippbx</code>
+                              <code onClick={copyToClipboard} >sh ip rou vrf ims-sbc-ippbx {ipWan}</code>
+                              <code onClick={copyToClipboard} >show run interface PuertoLogico</code>
+                              <code onClick={copyToClipboard} >ping vrf ims-sbc-ippbx {ipWan}</code>
+                              <code onClick={copyToClipboard} >show arp vrf ims-sbc-ippbx {ipWan}</code>
+                              <code onClick={copyToClipboard} ><span>Acceso Router:</span> telnet {ipWan} /vrf ims-sbc-ippbx</code>
                             </div>
 
                             <div>
                               <h4>NODO <span>A9K</span></h4>
-                              <code>sh ip rou vrf ims-sbc-ippbx {ipWan}</code>
-                              <code>show run interface PuertoLogico</code>
-                              <code>ping vrf ims-sbc-ippbx {ipWan}</code>
-                              <code>show arp vrf ims-sbc-ippbx {ipWan}</code>
-                              <code><span>Acceso Router:</span> telnet vrf ims-sbc-ippbx {ipWan}</code>
+                              <code onClick={copyToClipboard} >sh ip rou vrf ims-sbc-ippbx {ipWan}</code>
+                              <code onClick={copyToClipboard} >show run interface PuertoLogico</code>
+                              <code onClick={copyToClipboard} >ping vrf ims-sbc-ippbx {ipWan}</code>
+                              <code onClick={copyToClipboard} >show arp vrf ims-sbc-ippbx {ipWan}</code>
+                              <code onClick={copyToClipboard} ><span>Acceso Router:</span> telnet vrf ims-sbc-ippbx {ipWan}</code>
                             </div>
                           </div>
                         )}
