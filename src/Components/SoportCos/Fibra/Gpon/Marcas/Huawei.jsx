@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import {
   BsFillTelephoneFill,
   BsLaptop,
-  BsFillRocketTakeoffFill,
   BsCheckCircleFill,
 } from "react-icons/bs";
 
@@ -25,10 +24,9 @@ function Huawei() {
   const InpIpWanRef = useRef();
 
   const Valenlace = () => {
-    if (
-      InputenlaceRef.current.value !== undefined &&
-      InputenlaceRef.current.value !== ""
-    ) {
+    const valorInput = InputenlaceRef.current.value.trim();
+
+    if (valorInput !== undefined && valorInput !== "") {
       setFirtsComan(true);
       setenlace(InputenlaceRef.current.value);
     } else {
@@ -36,28 +34,25 @@ function Huawei() {
       setenlace("");
       setServPort("");
       setPuertos("");
-      alert("enlace es necesario para continuar");
     }
   };
 
   const ValServicePort = () => {
-    if (
-      InpServPortRef.current.value !== undefined &&
-      InpServPortRef.current.value !== ""
-    ) {
+    const valorInput = InpServPortRef.current.value.trim();
+
+    if (valorInput !== undefined && valorInput !== "") {
       setServPort(InpServPortRef.current.value);
     } else {
       setServPort("");
       setPuertos("");
-      alert("Service Port es necesario para continuar");
     }
   };
 
   const ValPuertos = () => {
-    const rack = InpRackRef.current.value;
-    const slot = InpSlotRef.current.value;
-    const port = InpPuertoRef.current.value;
-    const onu = InpOnuRef.current.value;
+    const rack = InpRackRef.current.value.trim();
+    const slot = InpSlotRef.current.value.trim();
+    const port = InpPuertoRef.current.value.trim();
+    const onu = InpOnuRef.current.value.trim();
 
     if (rack && slot && port && onu) {
       setPuertos(`${rack}/${slot}/${port}/${onu}`);
@@ -67,42 +62,69 @@ function Huawei() {
     }
   };
 
+  const ValIpValida = () => {
+    const valorInput = InpIpValRef.current.value.trim();
+
+    if (valorInput !== undefined && valorInput !== "") {
+      SetIpvalida(InpIpValRef.current.value);
+    } else {
+      SetIpvalida("");
+      SetIpWan("");
+    }
+  };
+
+  const ValIpWan = () => {
+    const valorInput = InpIpWanRef.current.value.trim();
+
+    if (valorInput !== undefined && valorInput !== "") {
+      SetIpWan(InpIpWanRef.current.value);
+    } else {
+      SetIpWan("");
+    }
+  };
+
   return (
     <div className="equipmentBrandselected">
-      <h3>validacion <span> red de acceso HUAWEI</span></h3>
+      <h3>
+        validacion <span> red de acceso HUAWEI</span>
+      </h3>
 
       <div className="enlace">
-        <input ref={InputenlaceRef} type="text" placeholder="enlace" />
-        <button onClick={Valenlace} className="Button Green">
-          <BsFillRocketTakeoffFill size={20} />
-        </button>
+        <input
+          ref={InputenlaceRef}
+          onChange={Valenlace}
+          type="text"
+          placeholder="enlace"
+        />
       </div>
 
       <div className="commands">
         {firtsComan && (
           <>
-            <p>PASO 1 (Configuracion del sistema)</p>
+            <p>PASO 1 (Validacion Service Port )</p>
             <code>display current-configuration | include {enlace}</code>
             <div className="enlace">
               <input
                 ref={InpServPortRef}
                 type="text"
                 placeholder="Service Port"
+                onChange={ValServicePort}
               />
-              <button onClick={ValServicePort} className="Button Green">
-                <BsCheckCircleFill size={20} />
-              </button>
             </div>
 
             {ServPort && (
               <>
-                <p>PASO 2 (Estado Puerto Optico)</p>
+                <p>PASO 2 (Validacion de Puertos)</p>
                 <code>display service-port {ServPort}</code>
                 <div className="Puertos">
                   <div className="inpPuertos">
                     <input ref={InpRackRef} placeholder="rack" type="text" />
                     <input ref={InpSlotRef} placeholder="slot" type="text" />
-                    <input ref={InpPuertoRef} placeholder="puerto" type="text" />
+                    <input
+                      ref={InpPuertoRef}
+                      placeholder="puerto"
+                      type="text"
+                    />
                     <input ref={InpOnuRef} placeholder="onu" type="text" />
                   </div>
                   <button onClick={ValPuertos} className="Button Green">
@@ -112,30 +134,36 @@ function Huawei() {
 
                 {Puertos && (
                   <>
-                    <p>PASO 3 (Informacion Puertos y ONT)</p>
+                    {/* <p>PASO 3 (Informacion Puertos y ONT)</p>
                     <code>
                       display service-port port {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}`}
                     </code>
                     <code>
                       display current-configuration ont {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
-                    </code>
+                    </code> */}
 
-                    <p>PASO 4 (Validar Potencias y Alarmas)</p>
+                    <p>PASO 3 (Validar Potencias y Alarmas)</p>
                     <code>config</code>
                     <code>
-                      interface gpon {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}`}
+                      interface gpon{" "}
+                      {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}`}
                     </code>
                     <code>
-                      display ont optical-info {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
+                      display ont optical-info{" "}
+                      {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
                     </code>
                     <code>
-                      display ont alarm-state {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
+                      display ont alarm-state{" "}
+                      {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
                     </code>
                     <code>
-                      display ont info {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
+                      display ont info{" "}
+                      {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
                     </code>
                     <code>
-                      display ont port state {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`} eth-port all
+                      display ont port state{" "}
+                      {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}{" "}
+                      eth-port all
                     </code>
 
                     <h3>
@@ -143,22 +171,12 @@ function Huawei() {
                     </h3>
 
                     <div className="Ips">
-                      <input ref={InpIpValRef} type="text" placeholder="IP VALIDA" />
-
-                      <button
-                        onClick={() => {
-                          if (InpIpValRef.current.value !== "") {
-                            SetIpvalida(InpIpValRef.current.value);
-                          } else {
-                            alert("Ip Valida es requerida para continuar");
-                            SetIpvalida("");
-                            SetIpWan("");
-                          }
-                        }}
-                        className="Button Green"
-                      >
-                        <BsCheckCircleFill size={20} />
-                      </button>
+                      <input
+                        ref={InpIpValRef}
+                        onChange={ValIpValida}
+                        type="text"
+                        placeholder="IP VALIDA"
+                      />
                     </div>
 
                     {ipValida && (
@@ -168,21 +186,12 @@ function Huawei() {
                         </code>
 
                         <div className="Ips">
-                          <input ref={InpIpWanRef} type="text" placeholder="IP WAN" />
-
-                          <button
-                            onClick={() => {
-                              if (InpIpWanRef.current.value !== "") {
-                                SetIpWan(InpIpWanRef.current.value);
-                              } else {
-                                alert("Ip Wan es requerida para continuar");
-                                SetIpWan("");
-                              }
-                            }}
-                            className="Button Green"
-                          >
-                            <BsCheckCircleFill size={20} />
-                          </button>
+                          <input
+                            ref={InpIpWanRef}
+                            type="text"
+                            placeholder="IP WAN"
+                            onChange={ValIpWan}
+                          />
                         </div>
                         {ipWan && (
                           <>
@@ -210,23 +219,46 @@ function Huawei() {
                             {internet && (
                               <div className="commandsIps">
                                 <div>
-                                  <h4>NODO <span> A1K</span></h4>
-                                  <code>show run vrf pymes-internet | inc {ipWan}</code>
+                                  <h4>
+                                    NODO <span> A1K</span>
+                                  </h4>
+                                  <code>
+                                    show run vrf pymes-internet | inc {ipWan}
+                                  </code>
                                   <code>show run interface </code>
                                   <code>ping vrf pymes-internet {ipWan} </code>
-                                  <code>ping vrf pymes-internet {ipWan} re 1500</code>
-                                  <code>show arp vrf pymes-internet {ipWan}</code>
-                                  <code><span>Acceso Router:</span> telnet {ipWan} /vrf pymes-internet</code>
+                                  <code>
+                                    ping vrf pymes-internet {ipWan} re 1500
+                                  </code>
+                                  <code>
+                                    show arp vrf pymes-internet {ipWan}
+                                  </code>
+                                  <code>
+                                    <span>Acceso Router:</span> telnet {ipWan}{" "}
+                                    /vrf pymes-internet
+                                  </code>
                                 </div>
 
                                 <div>
-                                  <h4>NODO <span>A9K</span></h4>
-                                  <code>show run router static vrf pymes-internet | inc {ipWan}</code>
+                                  <h4>
+                                    NODO <span>A9K</span>
+                                  </h4>
+                                  <code>
+                                    show run router static vrf pymes-internet |
+                                    inc {ipWan}
+                                  </code>
                                   <code>show run interface PuertoLogico</code>
                                   <code>ping vrf pymes-internet {ipWan}</code>
-                                  <code>ping vrf pymes-internet {ipWan} co 1500</code>
-                                  <code>show arp vrf pymes-internet {ipWan}</code>
-                                  <code><span>Acceso Router:</span> telnet vrf pymes-internet {ipWan}</code>
+                                  <code>
+                                    ping vrf pymes-internet {ipWan} co 1500
+                                  </code>
+                                  <code>
+                                    show arp vrf pymes-internet {ipWan}
+                                  </code>
+                                  <code>
+                                    <span>Acceso Router:</span> telnet vrf
+                                    pymes-internet {ipWan}
+                                  </code>
                                 </div>
                               </div>
                             )}
@@ -234,21 +266,39 @@ function Huawei() {
                             {telefonia && (
                               <div className="commandsIps">
                                 <div>
-                                  <h4>NODO <span> A1K</span></h4>
-                                  <code>sh ip rou vrf ims-sbc-ippbx {ipWan}</code>
+                                  <h4>
+                                    NODO <span> A1K</span>
+                                  </h4>
+                                  <code>
+                                    sh ip rou vrf ims-sbc-ippbx {ipWan}
+                                  </code>
                                   <code>show run interface PuertoLogico</code>
                                   <code>ping vrf ims-sbc-ippbx {ipWan}</code>
-                                  <code>show arp vrf ims-sbc-ippbx {ipWan}</code>
-                                  <code><span>Acceso Router:</span> telnet {ipWan} /vrf ims-sbc-ippbx</code>
+                                  <code>
+                                    show arp vrf ims-sbc-ippbx {ipWan}
+                                  </code>
+                                  <code>
+                                    <span>Acceso Router:</span> telnet {ipWan}{" "}
+                                    /vrf ims-sbc-ippbx
+                                  </code>
                                 </div>
 
                                 <div>
-                                  <h4>NODO <span>A9K</span></h4>
-                                  <code>sh ip rou vrf ims-sbc-ippbx {ipWan}</code>
+                                  <h4>
+                                    NODO <span>A9K</span>
+                                  </h4>
+                                  <code>
+                                    sh ip rou vrf ims-sbc-ippbx {ipWan}
+                                  </code>
                                   <code>show run interface PuertoLogico</code>
                                   <code>ping vrf ims-sbc-ippbx {ipWan}</code>
-                                  <code>show arp vrf ims-sbc-ippbx {ipWan}</code>
-                                  <code><span>Acceso Router:</span> telnet vrf ims-sbc-ippbx {ipWan}</code>
+                                  <code>
+                                    show arp vrf ims-sbc-ippbx {ipWan}
+                                  </code>
+                                  <code>
+                                    <span>Acceso Router:</span> telnet vrf
+                                    ims-sbc-ippbx {ipWan}
+                                  </code>
                                 </div>
                               </div>
                             )}

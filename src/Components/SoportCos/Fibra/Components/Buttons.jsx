@@ -13,7 +13,7 @@ function Buttons(props) {
       >
         GPON
       </button>
-      <button
+      {/* <button
         onClick={() => {
           props.resetStates();
           props.setP2p(true);
@@ -21,7 +21,7 @@ function Buttons(props) {
         className="Button Blue"
       >
         P2P
-      </button>
+      </button> */}
 
       <button
         onClick={() => {
@@ -33,7 +33,7 @@ function Buttons(props) {
         PLANTA EXTERNA
       </button>
 
-      <button
+      {/* <button
         onClick={() => {
           props.resetStates();
           props.setIpFija(true);
@@ -41,7 +41,7 @@ function Buttons(props) {
         className="Button Blue"
       >
         IP FIJA
-      </button>
+      </button> */}
 
       <button
         onClick={() => {
@@ -70,9 +70,9 @@ Buttons.propTypes = {
   resetStates: propTypes.func.isRequired,
   setKm: propTypes.func.isRequired,
   setPlantaExterna: propTypes.func.isRequired,
-  setIpFija: propTypes.func.isRequired,
+  // setIpFija: propTypes.func.isRequired,
   setGpon: propTypes.func.isRequired,
-  setP2p: propTypes.func.isRequired,
+  // setP2p: propTypes.func.isRequired,
   setPlantillas: propTypes.func.isRequired,
 };
 

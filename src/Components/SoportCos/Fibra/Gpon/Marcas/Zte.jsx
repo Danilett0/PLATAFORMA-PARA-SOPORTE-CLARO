@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import {
   BsFillTelephoneFill,
   BsLaptop,
-  BsFillRocketTakeoffFill,
   BsCheckCircleFill,
 } from "react-icons/bs";
 
@@ -23,17 +22,15 @@ function Zte() {
   const InpIpWanRef = useRef();
 
   const Valenlace = () => {
-    if (
-      InputenlaceRef.current.value !== undefined &&
-      InputenlaceRef.current.value !== ""
-    ) {
+    const valorInput = InputenlaceRef.current.value.trim();
+
+    if (valorInput !== undefined && valorInput !== "") {
       setFirtsComan(true);
       setenlace(InputenlaceRef.current.value);
     } else {
       setFirtsComan("");
       setenlace("");
       setPuertos("");
-      alert("enlace es necesario para continuar");
     }
   };
 
@@ -51,6 +48,28 @@ function Zte() {
     }
   };
 
+
+  const ValIpValida = () => {
+    const valorInput = InpIpValRef.current.value.trim();
+
+    if (valorInput !== undefined && valorInput !== "") {
+      SetIpvalida(InpIpValRef.current.value);
+    } else {
+      SetIpvalida("");
+      SetIpWan("");
+    }
+  };
+
+  const ValIpWan = () => {
+    const valorInput = InpIpWanRef.current.value.trim();
+
+    if (valorInput !== undefined && valorInput !== "") {
+      SetIpWan(InpIpWanRef.current.value);
+    } else {
+      SetIpWan("");
+    }
+  };
+
   return (
     <div className="equipmentBrandselected">
       <h3>
@@ -58,10 +77,7 @@ function Zte() {
       </h3>
 
       <div className="enlace">
-        <input ref={InputenlaceRef} type="text" placeholder="enlace" />
-        <button onClick={Valenlace} className="Button Green">
-          <BsFillRocketTakeoffFill size={20} />
-        </button>
+        <input ref={InputenlaceRef} onChange={Valenlace} type="text" placeholder="enlace" />
       </div>
 
       <div className="commands">
@@ -103,22 +119,7 @@ function Zte() {
                 <h3 style={{ marginTop: "20px" }}>validacion<span> Ruta Ping</span></h3>
 
                 <div className="Ips">
-                  <input ref={InpIpValRef} type="text" placeholder="IP VALIDA" />
-
-                  <button
-                    onClick={() => {
-                      if (InpIpValRef.current.value !== "") {
-                        SetIpvalida(InpIpValRef.current.value);
-                      } else {
-                        alert("Ip Valida es requerida para continuar");
-                        SetIpvalida("");
-                        SetIpWan("");
-                      }
-                    }}
-                    className="Button Green"
-                  >
-                    <BsCheckCircleFill size={20} />
-                  </button>
+                  <input ref={InpIpValRef} onChange={ValIpValida} type="text" placeholder="IP VALIDA" />
                 </div>
 
                 {ipValida && (
@@ -126,21 +127,7 @@ function Zte() {
                     <code style={{ margin: "10px 0px" }}> show ip rou vrf pymes-internet {ipValida} </code>
 
                     <div className="Ips">
-                      <input ref={InpIpWanRef} type="text" placeholder="IP WAN"/>
-
-                      <button
-                        onClick={() => {
-                          if (InpIpWanRef.current.value !== "") {
-                            SetIpWan(InpIpWanRef.current.value);
-                          } else {
-                            alert("Ip Wan es requerida para continuar");
-                            SetIpWan("");
-                          }
-                        }}
-                        className="Button Green"
-                      >
-                        <BsCheckCircleFill size={20} />
-                      </button>
+                      <input ref={InpIpWanRef} onChange={ValIpWan} type="text" placeholder="IP WAN"/>
                     </div>
                     {ipWan && (
                       <>
