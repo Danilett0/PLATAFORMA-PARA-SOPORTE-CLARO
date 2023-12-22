@@ -4,6 +4,8 @@ import {
   BsLaptop,
   BsCheckCircleFill,
 } from "react-icons/bs";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 
 function Huawei() {
   const [firtsComan, setFirtsComan] = useState(false);
@@ -24,9 +26,12 @@ function Huawei() {
   const InpIpWanRef = useRef();
 
   const copyToClipboard = (e) => {
-    navigator.clipboard.writeText(e.target.innerText)
-      .then(() => console.log("Texto copiado"))
-      .catch(err => console.error('Error al copiar el texto: ', err));
+    navigator.clipboard
+      .writeText(e.target.innerText)
+      .then(() => {
+        toastr.success("Texto copiado al portapapeles");
+      })
+      .catch((err) => console.error("Error al copiar el texto: ", err));
   };
 
   const Valenlace = () => {
@@ -64,7 +69,7 @@ function Huawei() {
       setPuertos(`${rack}/${slot}/${port}/${onu}`);
     } else {
       setPuertos("");
-      alert("Complete todos los datos para continuar");
+      toastr.info("Complete todos los datos para continuar");
     }
   };
 
@@ -108,7 +113,9 @@ function Huawei() {
         {firtsComan && (
           <>
             <p>PASO 1 (Validacion Service Port )</p>
-            <code onClick={copyToClipboard} >display current-configuration | include {enlace}</code>
+            <code onClick={copyToClipboard}>
+              display current-configuration | include {enlace}
+            </code>
             <div className="enlace">
               <input
                 ref={InpServPortRef}
@@ -121,7 +128,9 @@ function Huawei() {
             {ServPort && (
               <>
                 <p>PASO 2 (Validacion de Puertos)</p>
-                <code onClick={copyToClipboard} >display service-port {ServPort}</code>
+                <code onClick={copyToClipboard}>
+                  display service-port {ServPort}
+                </code>
                 <div className="Puertos">
                   <div className="inpPuertos">
                     <input ref={InpRackRef} placeholder="rack" type="text" />
@@ -149,24 +158,24 @@ function Huawei() {
                     </code> */}
 
                     <p>PASO 3 (Validar Potencias y Alarmas)</p>
-                    <code onClick={copyToClipboard} >config</code>
-                    <code onClick={copyToClipboard} >
+                    <code onClick={copyToClipboard}>config</code>
+                    <code onClick={copyToClipboard}>
                       interface gpon{" "}
                       {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}`}
                     </code>
-                    <code onClick={copyToClipboard} >
+                    <code onClick={copyToClipboard}>
                       display ont optical-info{" "}
                       {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
                     </code>
-                    <code onClick={copyToClipboard} >
+                    <code onClick={copyToClipboard}>
                       display ont alarm-state{" "}
                       {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
                     </code>
-                    <code onClick={copyToClipboard} >
+                    <code onClick={copyToClipboard}>
                       display ont info{" "}
                       {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
                     </code>
-                    <code onClick={copyToClipboard} >
+                    <code onClick={copyToClipboard}>
                       display ont port state{" "}
                       {`${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}{" "}
                       eth-port all
@@ -187,7 +196,10 @@ function Huawei() {
 
                     {ipValida && (
                       <>
-                        <code onClick={copyToClipboard}  style={{ margin: "10px 0px" }}>
+                        <code
+                          onClick={copyToClipboard}
+                          style={{ margin: "10px 0px" }}
+                        >
                           show ip rou vrf pymes-internet {ipValida}
                         </code>
 
@@ -228,18 +240,22 @@ function Huawei() {
                                   <h4>
                                     NODO <span> A1K</span>
                                   </h4>
-                                  <code onClick={copyToClipboard} >
+                                  <code onClick={copyToClipboard}>
                                     show run vrf pymes-internet | inc {ipWan}
                                   </code>
-                                  <code onClick={copyToClipboard} >show run interface </code>
-                                  <code onClick={copyToClipboard} >ping vrf pymes-internet {ipWan} </code>
-                                  <code onClick={copyToClipboard} >
+                                  <code onClick={copyToClipboard}>
+                                    show run interface{" "}
+                                  </code>
+                                  <code onClick={copyToClipboard}>
+                                    ping vrf pymes-internet {ipWan}{" "}
+                                  </code>
+                                  <code onClick={copyToClipboard}>
                                     ping vrf pymes-internet {ipWan} re 1500
                                   </code>
-                                  <code onClick={copyToClipboard} >
+                                  <code onClick={copyToClipboard}>
                                     show arp vrf pymes-internet {ipWan}
                                   </code>
-                                  <code onClick={copyToClipboard} >
+                                  <code onClick={copyToClipboard}>
                                     <span>Acceso Router:</span> telnet {ipWan}{" "}
                                     /vrf pymes-internet
                                   </code>
@@ -249,19 +265,23 @@ function Huawei() {
                                   <h4>
                                     NODO <span>A9K</span>
                                   </h4>
-                                  <code onClick={copyToClipboard} >
+                                  <code onClick={copyToClipboard}>
                                     show run router static vrf pymes-internet |
                                     inc {ipWan}
                                   </code>
-                                  <code onClick={copyToClipboard} >show run interface PuertoLogico</code>
-                                  <code onClick={copyToClipboard} >ping vrf pymes-internet {ipWan}</code>
-                                  <code onClick={copyToClipboard} >
+                                  <code onClick={copyToClipboard}>
+                                    show run interface PuertoLogico
+                                  </code>
+                                  <code onClick={copyToClipboard}>
+                                    ping vrf pymes-internet {ipWan}
+                                  </code>
+                                  <code onClick={copyToClipboard}>
                                     ping vrf pymes-internet {ipWan} co 1500
                                   </code>
-                                  <code onClick={copyToClipboard} >
+                                  <code onClick={copyToClipboard}>
                                     show arp vrf pymes-internet {ipWan}
                                   </code>
-                                  <code onClick={copyToClipboard} >
+                                  <code onClick={copyToClipboard}>
                                     <span>Acceso Router:</span> telnet vrf
                                     pymes-internet {ipWan}
                                   </code>
@@ -275,15 +295,19 @@ function Huawei() {
                                   <h4>
                                     NODO <span> A1K</span>
                                   </h4>
-                                  <code onClick={copyToClipboard} >
+                                  <code onClick={copyToClipboard}>
                                     sh ip rou vrf ims-sbc-ippbx {ipWan}
                                   </code>
-                                  <code onClick={copyToClipboard} >show run interface PuertoLogico</code>
-                                  <code onClick={copyToClipboard} >ping vrf ims-sbc-ippbx {ipWan}</code>
-                                  <code onClick={copyToClipboard} >
+                                  <code onClick={copyToClipboard}>
+                                    show run interface PuertoLogico
+                                  </code>
+                                  <code onClick={copyToClipboard}>
+                                    ping vrf ims-sbc-ippbx {ipWan}
+                                  </code>
+                                  <code onClick={copyToClipboard}>
                                     show arp vrf ims-sbc-ippbx {ipWan}
                                   </code>
-                                  <code onClick={copyToClipboard} >
+                                  <code onClick={copyToClipboard}>
                                     <span>Acceso Router:</span> telnet {ipWan}{" "}
                                     /vrf ims-sbc-ippbx
                                   </code>
@@ -293,15 +317,19 @@ function Huawei() {
                                   <h4>
                                     NODO <span>A9K</span>
                                   </h4>
-                                  <code onClick={copyToClipboard} >
+                                  <code onClick={copyToClipboard}>
                                     sh ip rou vrf ims-sbc-ippbx {ipWan}
                                   </code>
-                                  <code onClick={copyToClipboard} >show run interface PuertoLogico</code>
-                                  <code onClick={copyToClipboard} >ping vrf ims-sbc-ippbx {ipWan}</code>
-                                  <code onClick={copyToClipboard} >
+                                  <code onClick={copyToClipboard}>
+                                    show run interface PuertoLogico
+                                  </code>
+                                  <code onClick={copyToClipboard}>
+                                    ping vrf ims-sbc-ippbx {ipWan}
+                                  </code>
+                                  <code onClick={copyToClipboard}>
                                     show arp vrf ims-sbc-ippbx {ipWan}
                                   </code>
-                                  <code onClick={copyToClipboard} >
+                                  <code onClick={copyToClipboard}>
                                     <span>Acceso Router:</span> telnet vrf
                                     ims-sbc-ippbx {ipWan}
                                   </code>

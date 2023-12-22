@@ -4,6 +4,8 @@ import {
   BsLaptop,
   BsCheckCircleFill,
 } from "react-icons/bs";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 
 function Zte() {
   const [firtsComan, setFirtsComan] = useState(false);
@@ -23,7 +25,9 @@ function Zte() {
 
   const copyToClipboard = (e) => {
     navigator.clipboard.writeText(e.target.innerText)
-      .then(() => console.log("Texto copiado"))
+      .then(() => {
+        toastr.success("Texto Copiado al Portapapeles")
+      })
       .catch(err => console.error('Error al copiar el texto: ', err));
   };
 
@@ -51,10 +55,9 @@ function Zte() {
       setPuertos(`${rack}/${slot}/${port}/${onu}`);
     } else {
       setPuertos("");
-      alert("Complete todos los datos para continuar");
+      toastr.info("Complete todos los datos para continuar");
     }
   };
-
 
   const ValIpValida = () => {
     const valorInput = InpIpValRef.current.value.trim();

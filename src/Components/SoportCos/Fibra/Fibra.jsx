@@ -7,6 +7,8 @@ import Buttons from "./Components/Buttons";
 // import IpFija from "./Components/IpFija";
 import Plantillas from "./Components/Plantillas";
 
+
+
 function Fibra() {
   const [gpon, setGpon] = useState(false);
   // const [p2p, setP2p] = useState(false);
