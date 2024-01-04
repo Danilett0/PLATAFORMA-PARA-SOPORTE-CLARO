@@ -96,8 +96,9 @@ function Huawei() {
 
   return (
     <div className="equipmentBrandselected">
+      <h3><span>PASO 1: </span> VALIDACION EXTERNA</h3>
       <h3>
-        validacion <span> red de acceso HUAWEI</span>
+      Enlace <span>del servicio</span>
       </h3>
 
       <div className="enlace">
@@ -112,7 +113,7 @@ function Huawei() {
       <div className="commands">
         {firtsComan && (
           <>
-            <p>PASO 1 (Validacion Service Port )</p>
+            <p>Service Port</p>
             <code onClick={copyToClipboard}>
               display current-configuration | include {enlace}
             </code>
@@ -127,7 +128,7 @@ function Huawei() {
 
             {ServPort && (
               <>
-                <p>PASO 2 (Validacion de Puertos)</p>
+                <p>Puertos</p>
                 <code onClick={copyToClipboard}>
                   display service-port {ServPort}
                 </code>
@@ -149,15 +150,7 @@ function Huawei() {
 
                 {Puertos && (
                   <>
-                    {/* <p>PASO 3 (Informacion Puertos y ONT)</p>
-                    <code onClick={copyToClipboard} >
-                      display service-port port {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}`}
-                    </code>
-                    <code onClick={copyToClipboard} >
-                      display current-configuration ont {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
-                    </code> */}
-
-                    <p>PASO 3 (Validar Potencias y Alarmas)</p>
+                    <p>Potencias, Alarmas, Vecinos</p>
                     <code onClick={copyToClipboard}>config</code>
                     <code onClick={copyToClipboard}>
                       interface gpon{" "}
@@ -181,9 +174,16 @@ function Huawei() {
                       eth-port all
                     </code>
 
-                    <h3>
-                      validacion<span> Ruta Ping</span>
-                    </h3>
+                    <code onClick={copyToClipboard} >
+                      display service-port port {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}`}
+                    </code>
+                    <code onClick={copyToClipboard} >
+                      display current-configuration ont {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]} ${Puertos.split("/")[3]}`}
+                    </code>
+
+                    <h3><span>PASO 2: </span> VALIDACION INTERNA</h3>
+
+                    <h3 style={{ marginTop: "20px" }}>COMPROBACIÓN<span> Ruta Ping</span></h3>
 
                     <div className="Ips">
                       <input

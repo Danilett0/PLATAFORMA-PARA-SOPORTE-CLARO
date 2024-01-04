@@ -16,7 +16,7 @@ function SuportCos() {
           Selecciona un tipo de conexión <br /> para continuar
         </h2>
 
-        <img className="ImgAnimadaWork" src="/images/working.svg" alt="" />
+        <img className="ImgAnimadaWork" src="/images/choice-animate.svg" alt="" />
         
         <div className="buttons">
           <button

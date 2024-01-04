@@ -6,14 +6,14 @@ function IpFija(props) {
     <div className="container">
       <div className="boxContainer">
         <div>
-          <span>IP FIJA</span> <b>IP ASIGNADA (192.197.143.20)</b>
+          <span>IP FIJA</span> <b>IP ASIGNADA AL CLIENTE EN GERENCIA DE SERVICIOS / IP CORPORATIVA (VALIDAR SEGMENTACION)</b>
         </div>
         <div>
           <span>MASCARA</span> <b>255.255.255.0</b>
         </div>
         <div>
           <span>PUERTA enlace</span>
-          <b> IP TERMINADA EN 1 (192.197.143.1)</b>
+          <b> IP FIJA ASIGNADA TERMINADA EN 1 (XXX.XXX.XXX.1)</b>
         </div>
         <div>
           <span>DNS1</span> <b>190.157.8.33</b>

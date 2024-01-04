@@ -19,7 +19,6 @@ function PlantaExterna() {
       .catch((err) => console.error("Error al copiar el texto: ", err));
   };
 
-
   return (
     <div className="mainPlantillaMasiva">
       {!enviForm ? (
@@ -52,13 +51,25 @@ function PlantaExterna() {
 
           <div className="Colx2">
             <div>
-              <label>CÓDIGO DE SERVICIO</label>
-              <input placeholder="ADFH001" required {...register("Codigo del Servicio")} />
+              <label style={{ color: "var(--rojo-claro)" }}>
+                CÓDIGO DE SERVICIO
+              </label>
+              <input
+                placeholder="ADFH001"
+                required
+                {...register("Codigo del Servicio")}
+              />
             </div>
 
             <div>
-              <label>NOMBRE EMPRESA</label>
-              <input placeholder="JD ENTERPRISE SAS" required {...register("Nombre Empresa")} />
+              <label style={{ color: "var(--rojo-claro)" }}>
+                NOMBRE EMPRESA
+              </label>
+              <input
+                placeholder="JD ENTERPRISE SAS"
+                required
+                {...register("Nombre Empresa")}
+              />
             </div>
           </div>
 
@@ -73,8 +84,14 @@ function PlantaExterna() {
             </div>
 
             <div>
-              <label>DESCRIPCIÓN ACTIVIDAD</label>
-              <input placeholder="Se realizan pruebas de red de acceso..." required {...register("templateDescription")} />
+              <label style={{ color: "var(--rojo-claro)" }}>
+                DESCRIPCIÓN ACTIVIDAD
+              </label>
+              <input
+                placeholder="Se realizan pruebas de red de acceso..."
+                required
+                {...register("templateDescription")}
+              />
             </div>
           </div>
 
@@ -85,27 +102,50 @@ function PlantaExterna() {
             </div>
 
             <div>
-              <label>RED DE ACCESO (EQUIPO)</label>
-              <input placeholder="ZAC-BOG.TRIARA-CP2" required {...register("Red de Acceso")} />
+              <label style={{ color: "var(--rojo-claro)" }}>
+                RED DE ACCESO (EQUIPO)
+              </label>
+              <input
+                placeholder="ZAC-BOG.TRIARA-CP2"
+                required
+                {...register("Red de Acceso")}
+              />
             </div>
           </div>
 
           <div className="Colx2">
             <div>
-              <label>PUERTO OLT</label>
-              <input placeholder="1/2/12:6" required {...register("Puerto OLT")} />
+              <label style={{ color: "var(--rojo-claro)" }}>PUERTO OLT</label>
+              <input
+                placeholder="1/2/12:6"
+                required
+                {...register("Puerto OLT")}
+              />
             </div>
 
             <div>
-              <label>OT INSTALACIÓN</label>
-              <input placeholder="8783736" required {...register("OT Instalacion")} />
+              <label style={{ color: "var(--rojo-claro)" }}>
+                OT INSTALACIÓN
+              </label>
+              <input
+                placeholder="8783736"
+                required
+                {...register("OT Instalacion")}
+              />
             </div>
           </div>
 
           <div className="Colx2">
             <div>
-              <label>CONTACTO DEL CLIENTE:</label>
-              <input placeholder="JEFERSON CASTRO - CEL: 3112329898" required {...register("Contacto Cliente")} />
+              <label style={{ color: "var(--rojo-claro)" }}>
+                CONTACTO DEL CLIENTE:
+              </label>
+              <input
+                placeholder="JEFERSON CASTRO - CEL: 3112329898"
+                required
+                defaultValue={"JEFERSON | CEL: 3112329898"}
+                {...register("Contacto Cliente")}
+              />
             </div>
 
             <div>

@@ -82,8 +82,12 @@ function Zte() {
 
   return (
     <div className="equipmentBrandselected">
+
+<h3><span>PASO 1: </span> VALIDACION EXTERNA</h3>
+
+
       <h3>
-        validacion <span> red de acceso ZTE</span>
+      Enlace <span>del servicio</span>
       </h3>
 
       <div className="enlace">
@@ -93,10 +97,10 @@ function Zte() {
       <div className="commands">
         {firtsComan && (
           <>
-            <p>PASO 1 (Info, Validacion Clientes OLT)</p>
+            <p>Info, validacion clientes OLT</p>
             <code onClick={copyToClipboard} >show running-config | begin {enlace}</code>
 
-            <p>PASO 2 (Validacion Puertos)</p>
+            <p>Puertos</p>
 
             <div className="Puertos">
               <div className="inpPuertos">
@@ -112,7 +116,7 @@ function Zte() {
 
             {Puertos && (
               <>
-                <p>PASO 3 (Validar Potencias y Alarmas)</p>
+                <p>Potencias, Alarmas, Vecinos</p>
 
                 <code onClick={copyToClipboard} >show gpon onu state gpon_olt-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}`}</code>
                 <code onClick={copyToClipboard} >show pon power onu-rx gpon_olt-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}`}</code>
@@ -124,9 +128,9 @@ function Zte() {
                 <code onClick={copyToClipboard} >show mac interface vport-{`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${Puertos.split("/")[2]}.${Puertos.split("/")[3]}:1`}
                 </code>
 
-                <p style={{ marginTop: "20px" }}>PASO 4</p>
+                <h3><span>PASO 2: </span> VALIDACION INTERNA</h3>
 
-                <h3 style={{ marginTop: "20px" }}>validacion<span> Ruta Ping</span></h3>
+                <h3 style={{ marginTop: "20px" }}>COMPROBACIÓN <span> Ruta Ping</span></h3>
 
                 <div className="Ips">
                   <input ref={InpIpValRef} onChange={ValIpValida} type="text" placeholder="IP VALIDA" />

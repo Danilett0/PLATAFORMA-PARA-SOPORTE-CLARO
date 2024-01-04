@@ -27,7 +27,7 @@
 
 .mainSupportTool .options img.ImgAnimadaWork {
   width: 100%;
-  max-width: 350px;
+  max-width: 400px;
   margin: auto;
   display: block;
 }
@@ -150,6 +150,7 @@
   align-items: center;
   justify-content: center;
   margin: 20px 0px;
+  width: 100%;
 }
 
 .mainSupportTool .equipmentBrandselected .enlace button {
@@ -157,6 +158,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.mainSupportTool .equipmentBrandselected .enlace input{
+  width: 100%;
+    max-width: 282px;
 }
 
 .mainSupportTool .equipmentBrandselected .enlace button svg {
@@ -238,6 +244,11 @@
   align-items: center;
 }
 
+.mainSupportTool .mainFibraOptica .commands .Ips input{
+  width: 100%;
+  max-width: 282px;
+}
+
 .mainSupportTool .mainFibraOptica .commands .Ips button {
   color: white;
   margin: 0px 5px;
@@ -305,7 +316,6 @@
 }
 
 .mainSupportTool .mainPlantillaMasiva form .Colx2 div input {
-  padding: 10px;
   width: 100%;
   margin: 3px 0px;
 }
