@@ -160,9 +160,9 @@
   align-items: center;
 }
 
-.mainSupportTool .equipmentBrandselected .enlace input{
+.mainSupportTool .equipmentBrandselected .enlace input {
   width: 100%;
-    max-width: 282px;
+  max-width: 282px;
 }
 
 .mainSupportTool .equipmentBrandselected .enlace button svg {
@@ -197,7 +197,7 @@
   cursor: pointer;
 }
 
-.mainSupportTool .equipmentBrandselected .commands code:hover{
+.mainSupportTool .equipmentBrandselected .commands code:hover {
   color: var(--azul-claro);
 }
 
@@ -244,7 +244,7 @@
   align-items: center;
 }
 
-.mainSupportTool .mainFibraOptica .commands .Ips input{
+.mainSupportTool .mainFibraOptica .commands .Ips input {
   width: 100%;
   max-width: 282px;
 }

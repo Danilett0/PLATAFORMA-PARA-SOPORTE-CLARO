@@ -7,8 +7,6 @@ import Buttons from "./Components/Buttons";
 // import IpFija from "./Components/IpFija";
 import Plantillas from "./Components/Plantillas";
 
-
-
 function Fibra() {
   const [gpon, setGpon] = useState(false);
   // const [p2p, setP2p] = useState(false);
@@ -17,14 +15,13 @@ function Fibra() {
   // const [Ip, setIp] = useState(false);
   const [plantillas, setPlantillas] = useState(false);
 
-
   const resetStates = () => {
     setGpon(false);
     // setP2p(false);
     setPlantaExterna(false);
     setKm(false);
     // setIp(false);
-    setPlantillas(false)
+    setPlantillas(false);
   };
 
   return (
