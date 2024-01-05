@@ -165,9 +165,7 @@ function PlantaExterna() {
           {Object.entries(Informacion)
             .filter(([key, value]) => value !== "")
             .map(([key, value]) => (
-              <code key={key}>
-                {key}: ({value}) <br />
-              </code>
+               <>{key}: ({value}) <br /> </>
             ))}
         </button>
       )}

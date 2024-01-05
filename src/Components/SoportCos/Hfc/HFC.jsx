@@ -26,17 +26,20 @@ function HFC() {
 
   return (
     <div className="mainHfc">
-      <h2>HFC 🐰</h2>
-      <h4>¿Qué te gustaria revisar?</h4>
-
       <Buttons
         ResetModulos={ResetModulos}
         SetIpFija={SetIpFija}
+        ipFija={ipFija}
         SetRazonLlamada={SetRazonLlamada}
+        razonLlamada={razonLlamada}
         SetTipologia={SetTipologia}
+        tipologia={tipologia}
         SetConfAvan={SetConfAvan}
+        confAvan={confAvan}
         Setcommands={Setcommands}
+        comandos={comandos}
         setPlantillas={setPlantillas}
+        plantillas={plantillas}
       />
 
       {razonLlamada && <RazonLlamada />}

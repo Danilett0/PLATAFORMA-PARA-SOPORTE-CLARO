@@ -2,32 +2,72 @@
   padding: 20px;
 }
 
-.mainSupportTool .options {
+.mainSupportTool .options > div {
   width: 100%;
   padding: 20px;
   color: white;
   max-width: 1100px;
   margin: auto;
   background: rgb(3, 55, 85);
-  border-radius: 4px;
+  border-radius: 0px 0px 4px 4px;
+  display: flex;
 }
 
-.mainSupportTool .options .buttons {
+.mainSupportTool .options .Box-Date {
+  border-radius: 4px 4px 0px 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mainSupportTool .options .Box-Date h3 {
+  background-color: rgba(0, 0, 0, 0.164);
+  padding: 5px;
+  border-radius: 3px;
+  user-select: none;
+}
+
+.mainSupportTool .options > div .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
 }
 
-.mainSupportTool .options .buttons button {
+.mainSupportTool .options > div .buttons h2 {
+  font-size: 19px;
+}
+
+.mainSupportTool .options > div .buttons button {
   width: 100%;
   color: white;
-  margin: 3px 5px;
+  margin: 7px 5px;
   padding: 15px !important;
+  font-family: "Rubik", sans-serif;
 }
 
-.mainSupportTool .options img.ImgAnimadaWork {
+.mainSupportTool .options > div .buttons button.selected::after {
+  content: "||";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+
+  transform: translateY(-50%);
+}
+
+.mainSupportTool .options > div .buttons button.selected::before {
+  content: "||";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+
+  transform: translateY(-50%);
+}
+
+.mainSupportTool .options > div img.ImgAnimadaWork {
   width: 100%;
-  max-width: 400px;
+  max-width: 560px;
   margin: auto;
   display: block;
 }
@@ -56,7 +96,7 @@
 
 .mainSupportTool .mainHfc,
 .mainFibraOptica {
-  padding: 8px;
+  padding: 20px 5px;
 }
 
 .mainSupportTool .menuOptions {
@@ -73,6 +113,10 @@
   align-items: center;
   flex: 1;
   color: white;
+}
+
+.mainSupportTool .menuOptions button.selected {
+  background-color: var(--rojo-claro);
 }
 
 .mainSupportTool .maincontainers .container .boxContainer {
@@ -136,6 +180,10 @@
 .mainSupportTool .mainGpon .equipmentBrands button {
   width: 200px;
   margin: 0px 5px;
+}
+
+.mainSupportTool .mainGpon .equipmentBrands button.selected {
+  color: var(--azul-claro);
 }
 
 .mainSupportTool .equipmentBrandselected {
@@ -371,6 +419,11 @@
 @media (max-width: 767px) {
   .mainSupportTool .menuOptions {
     flex-direction: column;
+  }
+
+  .mainSupportTool .options > div {
+    flex-direction: column;
+    align-items: center;
   }
 
   .mainSupportTool .container {

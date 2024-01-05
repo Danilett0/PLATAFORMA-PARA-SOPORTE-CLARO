@@ -9,7 +9,7 @@ function Buttons(props) {
           props.resetStates();
           props.setGpon(true);
         }}
-        className="Button Blue"
+        className={`Button Blue ${props.gpon ? "selected" : ""}`}
       >
         GPON
       </button>
@@ -28,7 +28,7 @@ function Buttons(props) {
           props.resetStates();
           props.setPlantaExterna(true);
         }}
-        className="Button Blue"
+        className={`Button Blue ${props.plantaExterna ? "selected" : ""}`}
       >
         PLANTA EXTERNA
       </button>
@@ -48,7 +48,7 @@ function Buttons(props) {
           props.resetStates();
           props.setKm(true);
         }}
-        className="Button Blue"
+        className={`Button Blue ${props.Km ? "selected" : ""}`}
       >
         KM CIERRE
       </button>
@@ -58,7 +58,7 @@ function Buttons(props) {
           props.resetStates();
           props.setPlantillas(true);
         }}
-        className="Button Blue"
+        className={`Button Blue ${props.plantillas ? "selected" : ""}`}
       >
         PLANTILLAS
       </button>

@@ -16,7 +16,7 @@ function Gpon(props) {
             setHuawei(true);
             setZte(false);
           }}
-          className="Button Black"
+          className={`Button Black ${huawei ? "selected" : ""}`}
         >
           HUAWEI
         </button>
@@ -25,7 +25,7 @@ function Gpon(props) {
             setZte(true);
             setHuawei(false);
           }}
-          className="Button Black"
+          className={`Button Black ${zte ? "selected" : ""}`}
         >
           ZTE
         </button>

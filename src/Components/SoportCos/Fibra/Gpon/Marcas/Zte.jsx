@@ -171,10 +171,10 @@ function Zte() {
 
                               <code onClick={copyToClipboard} >show run vrf pymes-internet | inc {ipWan}</code>
                               <code onClick={copyToClipboard} >show run interface PuertoLogico</code>
-                              <code onClick={copyToClipboard} >ping vrf pymes-internet {ipWan} </code>
+                              <code onClick={copyToClipboard} ><span>ping vrf pymes-internet {ipWan}</span></code>
                               <code onClick={copyToClipboard} >ping vrf pymes-internet {ipWan} re 1500</code>
                               <code onClick={copyToClipboard} >show arp vrf pymes-internet {ipWan} </code>
-                              <code onClick={copyToClipboard} ><span>Acceso Router:</span> telnet {ipWan} /vrf pymes-internet</code>
+                              <code onClick={copyToClipboard} >telnet {ipWan} /vrf pymes-internet</code>
                             </div>
 
                             <div>
@@ -182,10 +182,10 @@ function Zte() {
 
                               <code onClick={copyToClipboard} >show run router static vrf pymes-internet | inc {ipWan}</code>
                               <code onClick={copyToClipboard} >show run interface PuertoLogico</code>
-                              <code onClick={copyToClipboard} >ping vrf pymes-internet {ipWan}</code>
+                              <code onClick={copyToClipboard} ><span>ping vrf pymes-internet {ipWan}</span></code>
                               <code onClick={copyToClipboard} >ping vrf pymes-internet {ipWan} co 1500</code>
                               <code onClick={copyToClipboard} >show arp vrf pymes-internet {ipWan}</code>
-                              <code onClick={copyToClipboard} ><span>Acceso Router:</span> telnet vrf pymes-internet {ipWan}</code>
+                              <code onClick={copyToClipboard} >telnet vrf pymes-internet {ipWan}</code>
                             </div>
                           </div>
                         )}
@@ -196,18 +196,18 @@ function Zte() {
                               <h4>NODO <span> A1K</span></h4>
                               <code onClick={copyToClipboard} >sh ip rou vrf ims-sbc-ippbx {ipWan}</code>
                               <code onClick={copyToClipboard} >show run interface PuertoLogico</code>
-                              <code onClick={copyToClipboard} >ping vrf ims-sbc-ippbx {ipWan}</code>
+                              <code onClick={copyToClipboard} ><span>ping vrf ims-sbc-ippbx {ipWan}</span></code>
                               <code onClick={copyToClipboard} >show arp vrf ims-sbc-ippbx {ipWan}</code>
-                              <code onClick={copyToClipboard} ><span>Acceso Router:</span> telnet {ipWan} /vrf ims-sbc-ippbx</code>
+                              <code onClick={copyToClipboard} >telnet {ipWan} /vrf ims-sbc-ippbx</code>
                             </div>
 
                             <div>
                               <h4>NODO <span>A9K</span></h4>
                               <code onClick={copyToClipboard} >sh ip rou vrf ims-sbc-ippbx {ipWan}</code>
                               <code onClick={copyToClipboard} >show run interface PuertoLogico</code>
-                              <code onClick={copyToClipboard} >ping vrf ims-sbc-ippbx {ipWan}</code>
+                              <code onClick={copyToClipboard} ><span>ping vrf ims-sbc-ippbx {ipWan}</span></code>
                               <code onClick={copyToClipboard} >show arp vrf ims-sbc-ippbx {ipWan}</code>
-                              <code onClick={copyToClipboard} ><span>Acceso Router:</span> telnet vrf ims-sbc-ippbx {ipWan}</code>
+                              <code onClick={copyToClipboard} >telnet vrf ims-sbc-ippbx {ipWan}</code>
                             </div>
                           </div>
                         )}

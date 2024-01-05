@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ComFibra from "../Components/SoportCos/Fibra/Fibra";
 import CompHfc from "../Components/SoportCos/Hfc/HFC";
+import Clock from "../Components/SoportCos/Clock";
+import Greeting from "../Components/Greeting";
 import "../App.css";
 import "../styles/pages/SuportCos.css";
 
@@ -10,33 +12,39 @@ function SuportCos() {
 
   return (
     <div className="mainSupportTool">
-
       <div className="options">
-        <h2>
-          Selecciona un tipo de conexión <br /> para continuar
-        </h2>
+        <Clock />
 
-        <img className="ImgAnimadaWork" src="/images/choice-animate.svg" alt="" />
-        
-        <div className="buttons">
-          <button
-            onClick={() => {
-              SetFibra(true);
-              SetHfc(false);
-            }}
-            className="Button Green"
-          >
-            FIBRA
-          </button>
-          <button
-            onClick={() => {
-              SetHfc(true);
-              SetFibra(false);
-            }}
-            className="Button Red"
-          >
-            HFC
-          </button>
+        <div>
+          <img
+            className="ImgAnimadaWork"
+            src="/images/car-animated.svg"
+            alt=""
+          />
+
+          <div className="buttons">
+            <Greeting />
+            <h2>Selecciona la tecnologia que deseas validar</h2>
+
+            <button
+              onClick={() => {
+                SetFibra(true);
+                SetHfc(false);
+              }}
+              className={`Button Green ${Fibra ? "selected" : ""}`}
+            >
+              FIBRA
+            </button>
+            <button
+              onClick={() => {
+                SetHfc(true);
+                SetFibra(false);
+              }}
+              className={`Button Red ${Hfc ? "selected" : ""}`}
+            >
+              HFC
+            </button>
+          </div>
         </div>
       </div>
 

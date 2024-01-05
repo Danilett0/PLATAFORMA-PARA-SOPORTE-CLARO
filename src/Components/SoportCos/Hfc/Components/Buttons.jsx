@@ -5,7 +5,7 @@ function Buttons(props) {
   return (
     <div className="menuOptions">
       <button
-        className="Button Blue"
+        className={`Button Blue ${props.razonLlamada ? "selected" : ""}`}
         onClick={() => {
           props.ResetModulos();
           props.SetRazonLlamada(true);
@@ -15,7 +15,7 @@ function Buttons(props) {
       </button>
 
       <button
-        className="Button Blue"
+        className={`Button Blue ${props.tipologia ? "selected" : ""}`}
         onClick={() => {
           props.ResetModulos();
           props.SetTipologia(true);
@@ -25,17 +25,17 @@ function Buttons(props) {
       </button>
 
       <button
-        className="Button Blue"
+        className={`Button Blue ${props.confAvan ? "selected" : ""}`}
         onClick={() => {
           props.ResetModulos();
           props.SetConfAvan(true);
         }}
       >
-        Configuraciones Avanzadas
+        Conf Avanzadas
       </button>
 
       <button
-        className="Button Blue"
+        className={`Button Blue ${props.comandos ? "selected" : ""}`}
         onClick={() => {
           props.ResetModulos();
           props.Setcommands(true);
@@ -45,7 +45,7 @@ function Buttons(props) {
       </button>
 
       <button
-        className="Button Blue"
+        className={`Button Blue ${props.ipFija ? "selected" : ""}`}
         onClick={() => {
           props.ResetModulos();
           props.SetIpFija(true);
@@ -55,7 +55,7 @@ function Buttons(props) {
       </button>
 
       <button
-        className="Button Blue"
+        className={`Button Blue ${props.plantillas ? "selected" : ""}`}
         onClick={() => {
           props.ResetModulos();
           props.setPlantillas(true);

@@ -27,16 +27,17 @@ function Fibra() {
   return (
     <div className="mainFibraOptica">
       <div className="EncabezadoFibra">
-        <h2>Fibra 😏</h2>
-        <h4>¿Qué te gustaria revisar?</h4>
-
         <Buttons
           resetStates={resetStates}
+          gpon={gpon}
           setGpon={setGpon}
           // setP2p={setP2p}
+          plantaExterna={plantaExterna}
           setPlantaExterna={setPlantaExterna}
+          Km={Km}
           setKm={setKm}
           // setIpFija={setIp}
+          plantillas={plantillas}
           setPlantillas={setPlantillas}
         />
       </div>
