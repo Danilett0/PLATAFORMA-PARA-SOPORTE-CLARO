@@ -33,15 +33,15 @@ function Buttons(props) {
         PLANTA EXTERNA
       </button>
 
-      {/* <button
+      <button
         onClick={() => {
           props.resetStates();
           props.setIpFija(true);
         }}
-        className="Button Blue"
+        className={`Button Blue ${props.Ip ? "selected" : ""}`}
       >
         IP FIJA
-      </button> */}
+      </button>
 
       <button
         onClick={() => {

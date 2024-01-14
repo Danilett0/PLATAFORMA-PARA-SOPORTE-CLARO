@@ -11,7 +11,7 @@ function NotFound() {
         src="/images/Not-Found.webp"
         alt="imagen pagina no encontrada"
       />
-      <Link to="/"> Home </Link>
+      <Link to="/"> VAMOS A INICIO </Link>
     </div>
   );
 }

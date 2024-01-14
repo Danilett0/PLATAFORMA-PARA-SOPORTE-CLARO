@@ -146,7 +146,6 @@
   background-color: var(--rojo-claro);
   border-radius: 4px;
   padding: 4px;
-  display: block;
   min-width: 45px;
   margin-right: 5px;
   color: white;
@@ -191,6 +190,22 @@
   color: white;
   padding: 20px;
   margin-top: 10px;
+}
+
+.mainSupportTool .equipmentBrandselected .buttons{
+  display: flex;
+}
+
+.mainSupportTool .equipmentBrandselected .buttons button {
+  width: 100%;
+  color: white;
+  margin: 7px 5px;
+  padding: 15px !important;
+  font-family: "Rubik", sans-serif;
+}
+
+.mainSupportTool .equipmentBrandselected .buttons button.selected{
+  filter: hue-rotate(144deg);
 }
 
 .mainSupportTool .equipmentBrandselected .enlace {
@@ -315,11 +330,11 @@
   width: 48%;
 }
 
-.mainSupportTool .mainFibraOptica .commands .commandsIps code {
+.mainSupportTool .mainFibraOptica .commands .commandsIps div code {
   display: block;
 }
 
-.mainSupportTool .mainFibraOptica .commands .commandsIps span {
+.mainSupportTool .mainFibraOptica .commands .commandsIps div span {
   color: var(--rojo-claro);
 }
 
@@ -376,7 +391,47 @@
   font-family: rubik, sans-serif;
 }
 
-.mainSupportTool .mainPlantillaMasiva .plantillaGenerada {
+.mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla > div {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+
+.mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla h5 {
+  color: var(--azul-claro);
+  background-color: var(--color-primario);
+  padding: 10px;
+  text-align: left;
+  user-select: none;
+  border-radius: 3px;
+  width: 49%;
+}
+
+.mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla h5:hover {
+  transform: scale(1.03);
+}
+
+.mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla h5 > button {
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  background-color: transparent;
+}
+
+.mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla h5 > button:hover {
+  color: var(--rojo-claro);
+}
+
+.mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla .plantillaGenerada {
   background-color: var(--color-primario);
   color: white;
   margin: 20px 0px;
@@ -459,6 +514,14 @@
   }
 
   .mainSupportTool .maincontainers .container .boxContainer div span {
+    width: 100%;
+  }
+
+  .mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla > div {
+    flex-direction: column;
+  }
+
+  .mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla > div h5 {
     width: 100%;
   }
 }

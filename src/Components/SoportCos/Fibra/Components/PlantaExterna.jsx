@@ -51,8 +51,8 @@ function PlantaExterna() {
 
           <div className="Colx2">
             <div>
-              <label style={{ color: "var(--rojo-claro)" }}>
-                CÓDIGO DE SERVICIO
+              <label>
+                CÓDIGO DE SERVICIO *
               </label>
               <input
                 placeholder="ADFH001"
@@ -62,8 +62,8 @@ function PlantaExterna() {
             </div>
 
             <div>
-              <label style={{ color: "var(--rojo-claro)" }}>
-                NOMBRE EMPRESA
+              <label>
+                NOMBRE EMPRESA *
               </label>
               <input
                 placeholder="JD ENTERPRISE SAS"
@@ -84,8 +84,8 @@ function PlantaExterna() {
             </div>
 
             <div>
-              <label style={{ color: "var(--rojo-claro)" }}>
-                DESCRIPCIÓN ACTIVIDAD
+              <label>
+                DESCRIPCIÓN ACTIVIDAD *
               </label>
               <input
                 placeholder="Se realizan pruebas de red de acceso..."
@@ -102,8 +102,8 @@ function PlantaExterna() {
             </div>
 
             <div>
-              <label style={{ color: "var(--rojo-claro)" }}>
-                RED DE ACCESO (EQUIPO)
+              <label>
+                RED DE ACCESO *
               </label>
               <input
                 placeholder="ZAC-BOG.TRIARA-CP2"
@@ -115,7 +115,7 @@ function PlantaExterna() {
 
           <div className="Colx2">
             <div>
-              <label style={{ color: "var(--rojo-claro)" }}>PUERTO OLT</label>
+              <label>PUERTO OLT *</label>
               <input
                 placeholder="1/2/12:6"
                 required
@@ -124,8 +124,8 @@ function PlantaExterna() {
             </div>
 
             <div>
-              <label style={{ color: "var(--rojo-claro)" }}>
-                OT INSTALACIÓN
+              <label>
+                OT INSTALACIÓN *
               </label>
               <input
                 placeholder="8783736"
@@ -137,14 +137,14 @@ function PlantaExterna() {
 
           <div className="Colx2">
             <div>
-              <label style={{ color: "var(--rojo-claro)" }}>
-                CONTACTO DEL CLIENTE:
+              <label>
+                CONTACTO DEL CLIENTE *
               </label>
               <input
-                placeholder="JEFERSON CASTRO - CEL: 3112329898"
                 required
-                defaultValue={"JEFERSON | CEL: 3112329898"}
+                defaultValue={"Nombre | Cel: 3112329898"}
                 {...register("Contacto Cliente")}
+                name="contact"
               />
             </div>
 
@@ -161,6 +161,8 @@ function PlantaExterna() {
           <input required className="Button Red" type="submit" />
         </form>
       ) : (
+      <div className="ResultadoPlantilla">
+      
         <button className="Button plantillaGenerada" onClick={copyToClipboard}>
           {Object.entries(Informacion)
             .filter(([key, value]) => value !== "")
@@ -168,6 +170,11 @@ function PlantaExterna() {
                <>{key}: ({value}) <br /> </>
             ))}
         </button>
+        <div>
+          <h5>Contacto Planta: <button onClick={copyToClipboard}>6017448595 Opción 1 Opción 3 Clave 358967</button></h5>
+          <h5>Contacto Datos:  <button onClick={copyToClipboard}>6017448595 Opción 2 Opción 3 Clave 358967</button></h5>
+        </div>
+        </div>
       )}
     </div>
   );

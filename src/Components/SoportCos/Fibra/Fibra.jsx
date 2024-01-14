@@ -4,7 +4,7 @@ import Gpon from "./Gpon/Gpon";
 import PlantaExterna from "./Components/PlantaExterna";
 import KmCierre from "./Components/KmCierre";
 import Buttons from "./Components/Buttons";
-// import IpFija from "./Components/IpFija";
+import IpFija from "./Components/IpFija";
 import Plantillas from "./Components/Plantillas";
 
 function Fibra() {
@@ -12,7 +12,7 @@ function Fibra() {
   // const [p2p, setP2p] = useState(false);
   const [plantaExterna, setPlantaExterna] = useState(false);
   const [Km, setKm] = useState(false);
-  // const [Ip, setIp] = useState(false);
+  const [Ip, setIp] = useState(false);
   const [plantillas, setPlantillas] = useState(false);
 
   const resetStates = () => {
@@ -20,7 +20,7 @@ function Fibra() {
     // setP2p(false);
     setPlantaExterna(false);
     setKm(false);
-    // setIp(false);
+    setIp(false);
     setPlantillas(false);
   };
 
@@ -36,7 +36,8 @@ function Fibra() {
           setPlantaExterna={setPlantaExterna}
           Km={Km}
           setKm={setKm}
-          // setIpFija={setIp}
+          setIpFija={setIp}
+          Ip={Ip}
           plantillas={plantillas}
           setPlantillas={setPlantillas}
         />
@@ -46,7 +47,7 @@ function Fibra() {
         {gpon && <Gpon />}
         {/* {p2p && <P2p />} */}
         {plantaExterna && <PlantaExterna />}
-        {/* {Ip && <IpFija />} */}
+        {Ip && <IpFija />}
         {Km && <KmCierre />}
         {plantillas && <Plantillas />}
       </div>
