@@ -2,7 +2,7 @@
   padding: 20px;
 }
 
-.mainSupportTool .options > div {
+.mainSupportTool .options>div {
   width: 100%;
   padding: 20px;
   color: white;
@@ -26,7 +26,7 @@
   user-select: none;
 }
 
-.mainSupportTool .options > div .buttons {
+.mainSupportTool .options>div .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,11 +35,11 @@
   max-width: 500px;
 }
 
-.mainSupportTool .options > div .buttons h2 {
+.mainSupportTool .options>div .buttons h2 {
   font-size: 19px;
 }
 
-.mainSupportTool .options > div .buttons button {
+.mainSupportTool .options>div .buttons button {
   width: 100%;
   color: white;
   margin: 7px 5px;
@@ -47,7 +47,7 @@
   font-family: "Rubik", sans-serif;
 }
 
-.mainSupportTool .options > div .buttons button.selected::after {
+.mainSupportTool .options>div .buttons button.selected::after {
   content: "||";
   position: absolute;
   top: 50%;
@@ -56,7 +56,7 @@
   transform: translateY(-50%);
 }
 
-.mainSupportTool .options > div .buttons button.selected::before {
+.mainSupportTool .options>div .buttons button.selected::before {
   content: "||";
   position: absolute;
   top: 50%;
@@ -65,7 +65,7 @@
   transform: translateY(-50%);
 }
 
-.mainSupportTool .options > div img.ImgAnimadaWork {
+.mainSupportTool .options>div img.ImgAnimadaWork {
   width: 100%;
   max-width: 560px;
   margin: auto;
@@ -192,7 +192,7 @@
   margin-top: 10px;
 }
 
-.mainSupportTool .equipmentBrandselected .buttons{
+.mainSupportTool .equipmentBrandselected .buttons {
   display: flex;
 }
 
@@ -204,7 +204,7 @@
   font-family: "Rubik", sans-serif;
 }
 
-.mainSupportTool .equipmentBrandselected .buttons button.selected{
+.mainSupportTool .equipmentBrandselected .buttons button.selected {
   filter: hue-rotate(144deg);
 }
 
@@ -399,7 +399,7 @@
   align-items: center;
 }
 
-.mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla > div {
+.mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla>div {
   display: flex;
   justify-content: space-between;
   width: 95%;
@@ -419,7 +419,7 @@
   transform: scale(1.03);
 }
 
-.mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla h5 > button {
+.mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla h5>button {
   color: white;
   cursor: pointer;
   border: none;
@@ -427,7 +427,7 @@
   background-color: transparent;
 }
 
-.mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla h5 > button:hover {
+.mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla h5>button:hover {
   color: var(--rojo-claro);
 }
 
@@ -448,6 +448,57 @@
   border-radius: 4px;
 }
 
+.mainSupportTool .mainPlantillaHfc.Whatsapp>div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd{
+  background: rgb(236, 236, 236);
+  width: 97%;
+  margin: auto;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 20px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd h4{
+  color: var(--azul-claro);
+  user-select: none;
+}
+
+.mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd p:hover{
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.mainSupportTool .mainPlantillaHfc.Whatsapp>div>.Plantilla {
+  width: 100%;
+  max-width: 48%;
+  padding: 10px;
+  margin: 0px 5px;
+  border-radius: 4px;
+  overflow: hidden scroll;
+  height: 100%;
+  min-height: 400px;
+  max-height: 400px;
+}
+
+.mainSupportTool .mainPlantillaHfc.Whatsapp>div>.Plantilla::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.mainSupportTool .mainPlantillaHfc.Whatsapp>div>.Plantilla h4 {
+  color: white;
+  text-align: left;
+}
+
 .mainSupportTool .mainPlantillaHfc .Plantilla button {
   width: 100%;
   display: flex;
@@ -464,7 +515,7 @@
   font-size: 19px;
 }
 
-.mainSupportTool .mainPlantillaHfc .Plantilla .templateDescription > p {
+.mainSupportTool .mainPlantillaHfc .Plantilla .templateDescription>p {
   color: white;
   text-align: left;
   font-size: 15px;
@@ -476,7 +527,7 @@
     flex-direction: column;
   }
 
-  .mainSupportTool .options > div {
+  .mainSupportTool .options>div {
     flex-direction: column;
     align-items: center;
   }
@@ -497,7 +548,7 @@
     flex-direction: column;
   }
 
-  .mainSupportTool .mainFibraOptica .commands .commandsIps > div {
+  .mainSupportTool .mainFibraOptica .commands .commandsIps>div {
     width: 100%;
     margin: 5px 0px;
   }
@@ -517,11 +568,11 @@
     width: 100%;
   }
 
-  .mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla > div {
+  .mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla>div {
     flex-direction: column;
   }
 
-  .mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla > div h5 {
+  .mainSupportTool .mainPlantillaMasiva .ResultadoPlantilla>div h5 {
     width: 100%;
   }
 }

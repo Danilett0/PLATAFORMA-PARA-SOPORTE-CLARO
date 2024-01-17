@@ -55,6 +55,16 @@ function Buttons(props) {
       </button>
 
       <button
+        className="Button Green"
+        onClick={() => {
+          props.ResetModulos();
+          props.setWhatsApp(true);
+        }}
+      >
+        WhatsApp
+      </button>
+
+      <button
         className={`Button Blue ${props.plantillas ? "selected" : ""}`}
         onClick={() => {
           props.ResetModulos();
