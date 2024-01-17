@@ -78,7 +78,7 @@ export const PlantillaWhatsapp1 = [
     id: 3,
     Titulo: "Informar Tiempos",
     Texto:
-      "Estoy validando tu caso, por favor permanece en línea. Recuerda que si no me respondes en 4 minutos, el chat se cerrará automáticamente. Te agradezco tu paciencia y comprensión.",
+      "Estoy validando tu caso, por favor permanece en línea. Recuerda que si no hay una respuesta de tu parte en menos de 4 minutos, el chat se cerrará automáticamente. Te agradezco tu paciencia y comprensión.",
   },
   {
     id: 4,
