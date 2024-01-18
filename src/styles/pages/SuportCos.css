@@ -454,16 +454,54 @@
 }
 
 .mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd{
-  background: rgb(236, 236, 236);
   width: 97%;
+  border: 1px solid var(--azul-claro);
   margin: auto;
   border-radius: 4px;
-  padding: 10px;
+  padding: 20px;
   margin-top: 20px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd form{
+  width: 100%;
+} 
+
+.mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd form h3{
+  color: white;
+}
+
+.mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd .Campos{
+  display: flex;
+  flex: 1;
+}
+
+.mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd .Campos > input{
+  flex: 1;
+}
+
+.mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd .Button{
+  color: white;
+}
+.mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd .ResultadoPlantilla h2{
+  color: white;
+}
+.mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd .ResultadoPlantilla h4{
+  margin-top: 20px;
+  color: var(--rojo-claro);
+}
+
+.mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd .ResultadoPlantilla code{
+  user-select: none;
+  cursor: pointer;
+  color: white;
+}
+
+.mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd .ResultadoPlantilla code:hover{
+  text-decoration: underline;
 }
 
 .mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd h4{

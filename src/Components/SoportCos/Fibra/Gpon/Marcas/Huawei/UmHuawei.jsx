@@ -128,7 +128,7 @@ function UmHuawei() {
                       NODO <span>A9K</span>
                     </h4>
                     <code onClick={copyToClipboard}>
-                      show run router static vrf pymes-internet |inc {ipWan}
+                      show run router static vrf pymes-internet | inc {ipWan}
                     </code>
                     <code>
                       <span>Puerto Logico</span>{" "}

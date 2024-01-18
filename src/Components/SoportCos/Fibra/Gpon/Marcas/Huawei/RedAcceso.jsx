@@ -123,13 +123,6 @@ function RedAcceso() {
                     <p>Informacion, Potencias, Alarmas, Vecinos</p>
 
                     <code onClick={copyToClipboard}>
-                      display current-configuration ont{" "}
-                      {`${Puertos.split("/")[0]}/${Puertos.split("/")[1]}/${
-                        Puertos.split("/")[2]
-                      } ${Puertos.split("/")[3]}`}
-                    </code>
-
-                    <code onClick={copyToClipboard}>
                       display current-configuration service-port {ServPort}
                     </code>
 

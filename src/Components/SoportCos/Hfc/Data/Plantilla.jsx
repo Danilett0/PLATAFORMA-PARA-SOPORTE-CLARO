@@ -18,6 +18,18 @@ export const Plantilla = [
       "Cliente se comunica para reportar fallas en su servicio, se realiza validación: aprovisionamiento ok, diagnosticador muestra niveles ok, Cliente manifiesta que se le han venido presentando fallos en los últimos días y que sigue sin servicio en el momento, se realiza validación adicional sobre el equipo, pero parece tener las configuraciones correctas por lo que se genera visita para revisión técnica.",
   },
   {
+    id: 11,
+    Titulo: "VISITA (Fallas TV)",
+    Texto:
+      "Cliente se comunica para reportar fallas en su servicio de television, se realiza validación: aprovisionamiento ok, soporte primer nivel, reinicio de decodificador, restablecimiento pero aun asi sigue sin funcionar el servicio, se genera visita",
+  },
+  {
+    id: 12,
+    Titulo: "VISITA (Fallas Telefonia)",
+    Texto:
+      "Cliente se comunica para reportar fallas en su servicio de telefonia, se realiza validación: diagnosticador niveles ok, aprovisionamiento ok, se actualiza y repara servicio, soporte primer nivel realizado, sigue sin funcionar por lo que se genera visita",
+  },
+  {
     id: 4,
     Titulo: "CONFIRMACION VISITA (Incumplimiento)",
     Texto:
@@ -68,23 +80,17 @@ export const PlantillaWhatsapp1 = [
     Texto:
       "Bienvenido a soporte de Claro empresas y negocios. Soy Jefferson, tu asesor. Gracias por comunicarte con nosotros. Estoy aquí para resolver tu solicitud de soporte técnico. Te pido un momento mientras reviso tu caso y te brindo la mejor solución posible. ¡Muchas gracias!",
   },
-  {
-    id: 2,
-    Titulo: "Saludo Inicial Con Respuesta Tardia",
-    Texto:
-      "Bienvenido a soporte de Claro empresas y negocios. Soy Jefferson, tu asesor. Te pido disculpas por el tiempo de respuesta. ¿Aún te encuentras en línea para revisar tu solicitud? ",
-  },
+  // {
+  //   id: 2,
+  //   Titulo: "Saludo Inicial Con Respuesta Tardia",
+  //   Texto:
+  //     "Bienvenido a soporte de Claro empresas y negocios. Soy Jefferson, tu asesor. Te pido disculpas por el tiempo de respuesta. ¿Aún te encuentras en línea para revisar tu solicitud? ",
+  // },
   {
     id: 3,
     Titulo: "Informar Tiempos",
     Texto:
       "Estoy validando tu caso, por favor permanece en línea. Recuerda que si no hay una respuesta de tu parte en menos de 4 minutos, el chat se cerrará automáticamente. Te agradezco tu paciencia y comprensión.",
-  },
-  {
-    id: 4,
-    Titulo: "Confirmar si aun esta en linea",
-    Texto:
-      "Estoy trabajando en tu consulta, pero ha pasado un tiempo y no he recibido respuesta, ¿Aún estás en linea?",
   },
   {
     id: 5,
@@ -124,5 +130,11 @@ export const PlantillaWhatsapp2 = [
     Titulo: "Generar Visita Problemas Con Modem",
     Texto:
       "He notado algunos problemas con el módem que me impiden darte soporte remoto por temas de configuración o compatibilidad. Por eso, es necesario que un técnico vaya a tu domicilio para revisar el módem y darte una solución al problema. Si estás de acuerdo, voy a generar una visita técnica para que un especialista pueda atenderte.",
+  },
+  {
+    id: 24,
+    Titulo: "Transferir a Linea de atencion",
+    Texto:
+      "Aprecio tu interés por comunicarte con nosotros por WhatsApp. Sin embargo, por este medio no podemos realizar estas solicitudes. Para poder ayudarte, te pido que te comuniques a la línea gratuita nacional: 01 8000 341 818 o marcando desde tu linea claro *611",
   },
 ];
