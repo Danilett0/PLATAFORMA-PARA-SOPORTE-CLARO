@@ -173,9 +173,9 @@ function WhatsApp() {
           </code>
 
           <h4>Notas F7 WhatsApp</h4>
-          <code>*/*/ Soporte WhatsApp /*/*</code>
+          <code onClick={copyToClipboard}>*/*/ Soporte WhatsApp /*/*</code>
           <br /><br />
-          <code>{` ${Informacion.afectacion}: ${Informacion.descripcion}`}</code>
+          <code onClick={copyToClipboard}>{` ${Informacion.afectacion}: ${Informacion.descripcion}`}</code>
           </div>
         )}
       </div>
