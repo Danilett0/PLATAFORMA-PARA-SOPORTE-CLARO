@@ -21,7 +21,7 @@ function ResultadoPlantilla({Informacion}) {
       <h4>Descripcion PQR</h4>
       <code onClick={copyToClipboard}>{generarTitulo(Informacion)}</code>
       <h4>Notas F7 Genarales</h4>
-      <input style={{textAlign: "center"}} defaultValue={`${Informacion.descmasiva ? "TK XXXXXXXX-DIS-FMS" : "TK XXXXXXXX-DIS-FMM"}`} />
+      <input style={{textAlign: "center", margin:"auto"}} defaultValue={`${Informacion.descmasiva ? "TK XXXXXXXX-DIS-FMS" : "TK XXXXXXXX-DIS-FMM"}`} />
       <br />
       <code onClick={copyToClipboard}>
         {`Reporte de Falla: ${Informacion.afectacion} - ${Informacion.descmasiva ? " Masiva " : " Envió visita "} Horario de Atención en Sitio: ${Informacion.horarios}`} <br />
