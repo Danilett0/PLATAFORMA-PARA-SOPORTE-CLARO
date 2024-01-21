@@ -62,7 +62,7 @@ function WhatsApp() {
       ) : (
         <>
         <h3>Contraseña Requerida</h3>
-        <input type="password" ref={valAccess} onChange={ValidarAcceso} />
+        <input style={{display: "flex", margin: "auto"}} type="password" ref={valAccess} onChange={ValidarAcceso} />
         </>
       )}
     </div>

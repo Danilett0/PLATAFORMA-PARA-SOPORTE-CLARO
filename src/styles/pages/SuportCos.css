@@ -468,10 +468,9 @@
 
 .mainPlantillaHfc.Whatsapp input{
   display: flex;
-  margin: auto;
 }
 
-.mainPlantillaHfc.Whatsapp h3 {
+.mainPlantillaHfc.Whatsapp h2 {
   color: white;
 }
 
@@ -487,6 +486,10 @@
   border-radius: 4px;
   padding: 20px;
   margin-bottom: 20px;
+}
+
+.mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd h2{
+  color: white;
 }
 
 .mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd .Box-Lls{
