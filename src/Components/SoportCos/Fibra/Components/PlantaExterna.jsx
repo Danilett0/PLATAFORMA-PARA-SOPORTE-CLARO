@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
-import toastr from "toastr";
-import "toastr/build/toastr.min.css";
+import {copyToClipboard} from "../../CopyText"
 
 function PlantaExterna() {
   const FormRef = useRef();
@@ -9,15 +8,6 @@ function PlantaExterna() {
   const [Informacion, setInformacion] = useState({});
 
   const { register, handleSubmit } = useForm();
-
-  const copyToClipboard = (e) => {
-    navigator.clipboard
-      .writeText(e.target.innerText)
-      .then(() => {
-        toastr.success("Texto copiado al portapapeles");
-      })
-      .catch((err) => console.error("Error al copiar el texto: ", err));
-  };
 
   return (
     <div className="mainPlantillaMasiva">

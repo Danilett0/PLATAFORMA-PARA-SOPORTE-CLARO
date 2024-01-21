@@ -21,13 +21,13 @@ export const Plantilla = [
     id: 11,
     Titulo: "VISITA (Fallas TV)",
     Texto:
-      "Cliente se comunica para reportar fallas en su servicio de television, se realiza validación: aprovisionamiento ok, soporte primer nivel, reinicio de decodificador, restablecimiento pero aun asi sigue sin funcionar el servicio, se genera visita",
+      "Cliente se comunica para reportar fallas en su servicio de television, se realiza validación: aprovisionamiento ok, soporte primer nivel, reinicio de decodificador, restablecimiento pero aun asi sigue sin funcionar el servicio, se genera visita.",
   },
   {
     id: 12,
     Titulo: "VISITA (Fallas Telefonia)",
     Texto:
-      "Cliente se comunica para reportar fallas en su servicio de telefonia, se realiza validación: diagnosticador niveles ok, aprovisionamiento ok, se actualiza y repara servicio, soporte primer nivel realizado, sigue sin funcionar por lo que se genera visita",
+      "Cliente se comunica para reportar fallas en su servicio de telefonia, se realiza validación: diagnosticador niveles ok, aprovisionamiento ok, se actualiza y repara servicio, soporte primer nivel realizado, sigue sin funcionar por lo que se genera visita.",
   },
   {
     id: 4,
@@ -78,31 +78,31 @@ export const PlantillaWhatsapp1 = [
     id: 1,
     Titulo: "Saludo Inicial",
     Texto:
-      "Bienvenido a soporte de Claro empresas y negocios. Soy Jefferson, tu asesor. Gracias por comunicarte con nosotros. Estoy aquí para resolver tu solicitud de soporte técnico. Te pido un momento mientras reviso tu caso y te brindo la mejor solución posible. ¡Muchas gracias!",
+      "Bienvenido a soporte de Claro empresas y negocios. Soy Jefferson, tu asesor y estoy aquí para resolver tu solicitud de soporte técnico. Te pido un momento mientras reviso tu caso y te brindo la mejor solución posible. ¡Muchas gracias!",
   },
-  // {
-  //   id: 2,
-  //   Titulo: "Saludo Inicial Con Respuesta Tardia",
-  //   Texto:
-  //     "Bienvenido a soporte de Claro empresas y negocios. Soy Jefferson, tu asesor. Te pido disculpas por el tiempo de respuesta. ¿Aún te encuentras en línea para revisar tu solicitud? ",
-  // },
   {
     id: 3,
     Titulo: "Informar Tiempos",
     Texto:
-      "Estoy validando tu caso, por favor permanece en línea. Recuerda que si no hay una respuesta de tu parte en menos de 4 minutos, el chat se cerrará automáticamente. Te agradezco tu paciencia y comprensión.",
+      "Por favor permanece en línea. Recuerda que si no hay una respuesta de tu parte en menos de 4 minutos, el chat se cerrará automáticamente, por lo que necesito una respuesta para saber que sigues conmigo en línea y así evitamos que se nos caiga el chat.",
+  },
+  {
+    id: 4,
+    Titulo: "Pedir tiempo al cliente",
+    Texto:
+    "Por favor, dame unos minutos mientras valido el caso y realizo el proceso correspondiente. Confírmame con un mensaje a continuación para mantener el chat activo."
   },
   {
     id: 5,
     Titulo: "Generar Radicado",
     Texto:
-      "Te informo que he generado un radicado para tu caso, este es un número que identifica tu solicitud y te permite hacer seguimiento al estado de la misma. Es importante que guardes el radicado, ya que lo necesitarás para consultar el avance de tu caso o para hacer alguna reclamación o sugerencia.",
+      "Acabo de generar un radicado para tu caso, este es un número que identifica tu solicitud y te permite hacer seguimiento al estado de la misma. Es importante que guardes el radicado, ya que lo necesitarás para consultar avances, hacer alguna reclamación o sugerencia al respecto.",
   },
   {
     id: 6,
     Titulo: "Invitar a Encuesta",
     Texto:
-      "Te invito a participar en una breve encuesta para calificar el servicio que has recibido de mi parte. Solo tienes que hacer clic en el enlace que te enviaré a continuación: https://yoiz.me/tw5of",
+      "Espero tengas un exelente dia!, ya para finalizar te invito a participar en una breve encuesta para calificar el servicio que has recibido de mi parte. Solo tienes que hacer clic en el enlace que te enviaré a continuación: https://yoiz.me/tw5of",
   },
 ];
 
@@ -111,19 +111,19 @@ export const PlantillaWhatsapp2 = [
     id: 20,
     Titulo: "Fallo Por Masiva",
     Texto:
-      "Ya he validado tu problema y he encontrado que está relacionado a un incidente en la zona que afecta el servicio. Te pido disculpas por las molestias que esto te pueda ocasionar. Te informo que nuestros técnicos ya están trabajando en el incidente para solucionarlo lo antes posible. Mientras tanto, voy a realizar una asociación de los datos de tu cuenta a la masiva, para que puedas tener una mejor experiencia de servicio cuando el incidente se resuelva",
+      "He validado tu problema y he encontrado que está relacionado a un incidente en la zona que afecta el servicio. Te pido disculpas por las molestias que esto te pueda ocasionar. Los técnicos están trabajando en el incidente en este momento por lo que solo es cuestion de esperar que ellos terminen su trabajo. Mientras tanto, voy a realizar una asociación de los datos de tu cuenta a la masiva, para que puedas tener una mejor experiencia de servicio cuando el incidente se resuelva.",
   },
   {
     id: 21,
     Titulo: "( Tiempos ) Fallo Por Masiva",
     Texto:
-      "Entiendo tu preocupación por el tiempo de solución del incidente. Te informo que estamos trabajando con la mayor diligencia y prioridad para resolverlo lo antes posible. Según el caso y la complejidad del incidente, lo más probable es que se solucione hoy mismo. Sin embargo, no puedo darte una hora exacta, ya que depende de varios factores que escapan a nuestro control. Te pido que tengas un poco de paciencia mientras se restablece el servicio",
+      "Según el caso y la complejidad del incidente, lo más probable es que se solucione hoy mismo. Sin embargo, no puedo darte una hora exacta, ya que depende de varios factores que escapan a nuestro control. Te pido que tengas un poco de paciencia mientras se restablece el servicio.",
   },
   {
     id: 22,
     Titulo: "Generar Visita Problemas Con Señal",
     Texto:
-      "He visto que hay un problema con el servicio asociado a la señal del módem que requiere asistencia técnica de forma presencial. Si esta de acuerdo voy a generar una visita técnica para que un especialista pueda revisar tu módem y darte una solución al problema",
+      "He visto que hay un problema con el servicio asociado a la señal del módem que requiere asistencia técnica de forma presencial. Si estas de acuerdo voy a generar una visita técnica para que un especialista pueda revisar tu módem y te de una solución al problema.",
   },
   {
     id: 23,
@@ -135,6 +135,6 @@ export const PlantillaWhatsapp2 = [
     id: 24,
     Titulo: "Transferir a Linea de atencion",
     Texto:
-      "Aprecio tu interés por comunicarte con nosotros por WhatsApp. Sin embargo, por este medio no podemos realizar estas solicitudes. Para poder ayudarte, te pido que te comuniques a la línea gratuita nacional: 01 8000 341 818 o marcando desde tu linea claro *611",
+      "Lamentablemente por este medio no podemos realizar estas solicitudes, pero para poder ayudarte, te pido que te comuniques a la línea gratuita nacional: 01 8000 341 818 o marcando desde tu línea claro *611, una vez allí marcas al área que deseas comunicarte y te ayudaran con tu solicitud sin problema.",
   },
 ];

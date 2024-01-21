@@ -1,23 +1,13 @@
 import React, { useState } from "react";
 import { FaArrowCircleDown } from "react-icons/fa";
 import { Plantilla } from "../Data/Plantilla";
-import toastr from "toastr";
-import "toastr/build/toastr.min.css";
+import {copyToClipboard} from "../../CopyText"
 
 function Plantillas() {
   const [situacion, setSituacion] = useState();
 
   const handleClick = (id) => {
     setSituacion(id === situacion ? "close" : id);
-  };
-
-  const copyToClipboard = (e) => {
-    navigator.clipboard
-      .writeText(e.target.innerText)
-      .then(() => {
-        toastr.success("Texto copiado al portapapeles");
-      })
-      .catch((err) => console.error("Error al copiar el texto: ", err));
   };
 
   return (

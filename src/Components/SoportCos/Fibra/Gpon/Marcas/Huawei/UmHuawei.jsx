@@ -1,8 +1,6 @@
 import React, { useRef, useState } from "react";
-
 import { BsFillTelephoneFill, BsLaptop } from "react-icons/bs";
-import toastr from "toastr";
-import "toastr/build/toastr.min.css";
+import {copyToClipboard} from "../../../../CopyText"
 
 function UmHuawei() {
   const [ipValida, SetIpvalida] = useState("");
@@ -14,14 +12,6 @@ function UmHuawei() {
   const InpIpValRef = useRef();
   const InpIpWanRef = useRef();
 
-  const copyToClipboard = (e) => {
-    navigator.clipboard
-      .writeText(e.target.innerText)
-      .then(() => {
-        toastr.success("Texto copiado al portapapeles");
-      })
-      .catch((err) => console.error("Error al copiar el texto: ", err));
-  };
 
   const ValIpValida = () => {
     const valorInput = InpIpValRef.current.value.trim();

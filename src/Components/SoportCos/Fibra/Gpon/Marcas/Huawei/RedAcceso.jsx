@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
-import toastr from "toastr";
-import "toastr/build/toastr.min.css";
+import {copyToClipboard} from "../../../../CopyText"
 
 function RedAcceso() {
   const [firtsComan, setFirtsComan] = useState(false);
@@ -14,15 +13,6 @@ function RedAcceso() {
   const InpSlotRef = useRef();
   const InpPuertoRef = useRef();
   const InpOnuRef = useRef();
-
-  const copyToClipboard = (e) => {
-    navigator.clipboard
-      .writeText(e.target.innerText)
-      .then(() => {
-        toastr.success("Texto copiado al portapapeles");
-      })
-      .catch((err) => console.error("Error al copiar el texto: ", err));
-  };
 
   const Valenlace = () => {
     const valorInput = InputenlaceRef.current.value.trim();
@@ -59,7 +49,7 @@ function RedAcceso() {
       setPuertos(`${rack}/${slot}/${port}/${onu}`);
     } else {
       setPuertos("");
-      toastr.info("Complete todos los datos para continuar");
+      alert("Complete todos los datos para continuar");
     }
   };
 
