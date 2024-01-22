@@ -50,7 +50,7 @@ function WhatsApp() {
                   <Form
                     setInformacion={setInformacion}
                     setEnvioForm={setEnvioForm}
-                    accion={`${Opcion.visita ? "visita" : "masiva"}`}
+                    accion={`${Opcion.masiva ? "masiva" : "visita"}`}
                   />
                 ) : (
                   <ResultadoPlantilla Informacion={Informacion} />

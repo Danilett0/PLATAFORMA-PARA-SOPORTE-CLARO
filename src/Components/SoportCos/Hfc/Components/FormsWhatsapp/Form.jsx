@@ -15,7 +15,7 @@ function Form(props) {
         <div className="Box-Lls">
           <textarea
             className="Tex-Lls"
-            defaultValue={"** SOPPY ** Descripcion_Del_Problema_Aqui"}
+            defaultValue={"SOPPY: RECIBE Nombre_XXXXX CEL: XXXXXXX SERVICIO CAÍDO Cliente indica que tiene problemas con su servicio, se realiza soporte primer nivel pero sigue sin funcionar, se genera visita (404)"}
           />
         </div>
       )}
@@ -62,7 +62,7 @@ function Form(props) {
 
           <input
             required
-            placeholder="Nombre Cliente"
+            placeholder="Nombre"
             {...register("nombre")}
           />
         </div>
@@ -70,7 +70,7 @@ function Form(props) {
         <div className="Campos">
           <input
             required
-            placeholder="Celular Cliente"
+            placeholder="Celular"
             {...register("celular")}
           />
           <input
@@ -89,7 +89,7 @@ function Form(props) {
           />
           <input
             required
-            placeholder="Terminal Equipo"
+            placeholder="Terminal"
             {...register("terminal")}
           />
         </div>
@@ -103,12 +103,12 @@ function Form(props) {
           />
           <input
             required
-            placeholder="Correo Electronico"
+            placeholder="E-Mail"
             {...register("correo")}
           />
           <input
             required
-            placeholder="Descripcion del problema detectado"
+            placeholder="Descripcion problema"
             {...register("descripcion")}
           />
         </div>

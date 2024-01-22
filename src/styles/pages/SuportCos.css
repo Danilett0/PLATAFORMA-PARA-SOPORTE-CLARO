@@ -470,7 +470,7 @@
   display: flex;
 }
 
-.mainPlantillaHfc.Whatsapp h2 {
+.mainPlantillaHfc.Whatsapp :where(h2,h3,h4,h5,h6) {
   color: white;
 }
 
@@ -486,10 +486,6 @@
   border-radius: 4px;
   padding: 20px;
   margin-bottom: 20px;
-}
-
-.mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd h2{
-  color: white;
 }
 
 .mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd .Box-Lls{
@@ -516,9 +512,6 @@
   flex: 1;
 }
 
-.mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd form h3{
-  color: white;
-}
 
 .mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd .Campos{
   display: flex;
@@ -532,9 +525,7 @@
 .mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd .Button{
   color: white;
 }
-.mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd .ResultadoPlantilla h2{
-  color: white;
-}
+
 .mainSupportTool .mainPlantillaHfc.Whatsapp > .InfoAdd .ResultadoPlantilla h4{
   margin-top: 20px;
   color: var(--rojo-claro);
